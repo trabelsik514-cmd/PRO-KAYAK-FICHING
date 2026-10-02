@@ -19,6 +19,12 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Create Android project
         run: npx cap add android
+      - name: Prepare web assets
+        run: |
+          rm -rf www
+          mkdir -p www
+          cp -f *.html *.js *.css www/ 2>/dev/null || true
+          cp -rf assets data www/ 2>/dev/null || true
       - name: Sync web app
         run: npx cap sync android
       - name: Java
