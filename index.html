@@ -33,7 +33,13 @@
   </section>
 
   <section class="three-grid">
-    <article class="card info-card"><div class="card-title"><span class="real-icon wind-real"></span><h2 data-ar="الرياح" data-fr="Vent">الرياح</h2></div><strong id="wind">-- nd</strong><span id="gust">هبات -- nd</span><div class="compass"><span>N</span><span>E</span><span>S</span><span>W</span><i id="windArrow"></i></div><small data-ar="اتجاه الرياح" data-fr="Direction du vent">اتجاه الرياح</small><b id="winddir">--°</b></article>
+    <article class="card info-card"><div class="card-title"><span class="real-icon wind-real"></span><h2 data-ar="الرياح" data-fr="Vent">الرياح</h2></div><strong id="wind">-- nd</strong><span id="gust">هبات -- nd</span><div class="compass compass-pro" aria-label="بوصلة اتجاه الرياح">
+  <div class="compass-ring"><span>N</span><span>NE</span><span>E</span><span>SE</span><span>S</span><span>SW</span><span>W</span><span>NW</span></div>
+  <div class="compass-ticks" aria-hidden="true"></div>
+  <div class="compass-needle" id="windArrow" aria-hidden="true"><i></i><b></b></div>
+  <div class="compass-center"></div>
+  <div class="compass-degree" id="windCompassDegree">--°</div>
+</div><small data-ar="اتجاه الرياح" data-fr="Direction du vent">اتجاه الرياح</small><b id="winddir">--°</b></article>
     <article class="card info-card"><div class="card-title"><span class="real-icon wave-real"></span><h2 data-ar="الموج" data-fr="Vagues">الموج</h2></div><strong id="wave">-- m</strong><span id="period">الفترة -- s</span><div class="wave-arrow">↗</div><small data-ar="اتجاه الموج" data-fr="Direction des vagues">اتجاه الموج</small><b id="wavedir">--°</b></article>
     <article class="card sea-card"><div class="card-title"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/waves.svg" alt="" aria-hidden="true"><h2 data-ar="حالة البحر" data-fr="État de la mer">حالة البحر</h2></div><strong id="seaState">--</strong><div class="sea-status" id="kayakStatus">--</div></article>
   </section>
