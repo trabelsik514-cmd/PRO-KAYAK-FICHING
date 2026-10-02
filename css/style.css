@@ -147,3 +147,27 @@ button,input{max-width:100%}
   .wind-card .compass-needle{height:46px}
   .wind-values #wind{font-size:24px}
 }
+
+
+/* Final mobile polish: readable wind compass + real hourly weather visuals */
+.hour-weather{display:block;width:34px;height:34px;margin:5px auto;border-radius:10px;background-position:center;background-size:cover;background-repeat:no-repeat;box-shadow:0 3px 9px #0007}
+.hour-weather.wx-sun{background-image:url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=160&q=75")}
+.hour-weather.wx-cloud{background-image:url("https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=160&q=75")}
+.hour-weather.wx-rain{background-image:url("https://images.unsplash.com/photo-1519692933481-e162a9577cbe?auto=format&fit=crop&w=160&q=75")}
+@media(max-width:480px){
+  .wind-card{grid-column:1/-1;min-height:188px}
+  .wind-data{grid-template-columns:minmax(0,1fr) 124px;min-height:142px;gap:8px}
+  .wind-card .compass{width:108px;height:108px}
+  .wind-card .compass-needle{height:70px}
+  .wind-card .compass-ticks{inset:14px}
+  .wind-card .compass-ring span{font-size:8px}
+  .wind-card .compass-degree{bottom:-22px;font-size:9px}
+  .wind-values #wind{font-size:30px}
+  .wind-values #gust{font-size:11px}
+  .wind-direction-text{margin-top:18px}
+}
+@media(max-width:360px){
+  .wind-data{grid-template-columns:minmax(0,1fr) 112px}
+  .wind-card .compass{width:98px;height:98px}
+  .wind-card .compass-needle{height:64px}
+}
