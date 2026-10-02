@@ -256,3 +256,22 @@ body{background:#020f18;color:#f4fbff}
 .search-result:last-child{border-bottom:0}.search-result b{font-size:14px}.search-result span{font-size:10px;color:#8fb1c0}
 .search-result:hover{background:#0b2b3b}.search-loading{padding:16px;text-align:center;color:#9cc2d1;font-size:12px}
 @media(max-width:700px){.search-results{top:51px}.search-result{padding:11px 12px}.search-result b{font-size:12px}.search-result span{font-size:9px}}
+
+/* FINAL ICON SYSTEM */
+.real-icon,.card-title>.ui-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:linear-gradient(145deg,#0d4054,#082330);border:1px solid #24647a;box-shadow:inset 0 1px 0 #6ee8ff1c,0 5px 12px #0005}
+.real-icon .ui-icon,.card-title>.ui-icon{width:20px;height:20px;color:#68ddff;stroke-width:1.7}
+.wind-real .ui-icon{color:#7ee8ff}.wave-real .ui-icon{color:#4ed5ff}
+.weather-symbol{width:76px;height:76px;stroke-width:1.45;filter:drop-shadow(0 7px 10px #0008)}
+.weather-icon{color:#bfefff}
+.hour-weather-svg{width:28px;height:28px;color:#67dfff;display:block;margin:6px auto}
+.marine-extra{display:flex;gap:7px;margin-top:12px}
+.marine-extra span{display:flex;align-items:center;gap:4px;padding:5px 7px;background:#061a25;border:1px solid #164558;border-radius:9px;font-size:9px;color:#8eb2c0}
+.marine-extra svg{width:15px;height:15px;color:#54d7ff}.marine-extra b{font-size:9px}
+.wave-arrow{display:inline-block;transform-origin:center;transition:transform .45s ease}
+.compass-pro{top:44px;left:auto;right:12px;transform:none;width:102px;height:102px}
+.wind-card .wind-data{padding-right:118px}
+@media(max-width:700px){
+ .marine-extra{gap:4px}.marine-extra span{padding:4px 5px;font-size:8px}.marine-extra svg{width:13px;height:13px}.marine-extra b{font-size:8px}
+ .compass-pro{right:6px;top:66px;width:69px;height:69px}
+ .wind-card .wind-data{padding-right:78px}
+}
