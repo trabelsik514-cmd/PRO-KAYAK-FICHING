@@ -382,3 +382,87 @@ body{background:#020f18;color:#f4fbff}
   .wind-card .wind-values #wind{font-size:19px}
   .marine-card>strong{font-size:21px}
 }
+
+/* === PRO KAYAK FINAL ICON + COMPASS SYSTEM v6 === */
+.ui-icon{display:block;flex:0 0 auto;overflow:visible}
+.card-title>.ui-icon,
+.real-icon .ui-icon,
+.weather-meta .ui-icon,
+.bottom-nav .ui-icon,
+.search-action .ui-icon,
+.location-pill .ui-icon{
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.card-title>.ui-icon{width:29px;height:29px;color:#55dcff;stroke-width:1.85}
+.real-icon{background:none!important;border:0!important;box-shadow:none!important;padding:0;display:grid;place-items:center}
+.real-icon .ui-icon{width:30px;height:30px;color:#55dcff;stroke-width:1.85}
+.weather-meta .ui-icon{width:25px;height:25px;color:#62ddff;stroke-width:1.85}
+.weather-symbol{stroke-width:1.55;filter:drop-shadow(0 6px 9px #0009)}
+.hour-weather-svg{width:30px;height:30px;color:#64dfff;stroke-width:1.75;filter:drop-shadow(0 3px 6px #0007)}
+.bottom-nav .ui-icon{width:27px;height:27px;color:#9bb5c0;stroke-width:1.75}
+.bottom-nav .active .ui-icon{color:#3fc9ff}
+
+/* Advanced compass: isolated, readable and never overlapping the data */
+.wind-card{overflow:hidden}
+.wind-card .wind-data{position:relative}
+.wind-card .compass-pro{
+  position:absolute;
+  top:54px;
+  right:5px;
+  left:auto;
+  width:78px;
+  height:78px;
+  transform:none;
+  z-index:3;
+  border:1px solid #3d7082;
+  background:
+    radial-gradient(circle at 50% 50%,#0b3140 0 15%,#061b27 16% 48%,#082738 49% 61%,#061722 62% 100%);
+  box-shadow:0 0 0 2px #061a25,0 7px 16px #0009,inset 0 0 14px #03131e;
+}
+.wind-card .compass-ring span{font-size:6.5px;letter-spacing:.2px}
+.wind-card .compass-ring span:nth-child(1){top:7px}
+.wind-card .compass-ring span:nth-child(2){top:18%;left:77%}
+.wind-card .compass-ring span:nth-child(3){left:91%}
+.wind-card .compass-ring span:nth-child(4){top:79%;left:77%}
+.wind-card .compass-ring span:nth-child(5){top:91%}
+.wind-card .compass-ring span:nth-child(6){top:79%;left:23%}
+.wind-card .compass-ring span:nth-child(7){left:9%}
+.wind-card .compass-ring span:nth-child(8){top:18%;left:23%}
+.wind-card .compass-ticks{inset:10px;border-color:#3d7182}
+.wind-card .compass-needle{height:52px}
+.wind-card .compass-needle i{border-left-width:8px;border-right-width:8px;border-bottom-width:25px}
+.wind-card .compass-needle i:after{left:-6px;top:23px;border-left-width:6px;border-right-width:6px;border-top-width:22px}
+.wind-card .compass-degree{bottom:-17px;font-size:7px;padding:2px 5px}
+
+/* Weather and dashboard icons: no square containers */
+.weather-icon{display:grid;place-items:center;background:none!important;border:0!important;box-shadow:none!important}
+.weather-icon .weather-symbol{width:82px;height:82px;color:#e9faff}
+.marine-card .card-title>.ui-icon,
+.sea-card .card-title>.ui-icon{color:#55dcff}
+.celestial .section-title>.ui-icon{color:#ffd03a}
+.mini-card .card-title>.ui-icon{color:#55dcff}
+.fishing-score .card-title>.ui-icon{color:#73df4b}
+
+/* Phone widths */
+@media(max-width:700px){
+  .card-title>.ui-icon{width:27px;height:27px}
+  .real-icon .ui-icon{width:28px;height:28px}
+  .weather-meta .ui-icon{width:24px;height:24px}
+  .weather-icon .weather-symbol{width:64px;height:64px}
+  .wind-card .compass-pro{width:76px;height:76px;top:55px;right:4px}
+  .wind-card .compass-needle{height:50px}
+  .wind-card .compass-degree{bottom:-16px;font-size:7px}
+}
+@media(max-width:390px){
+  .card-title>.ui-icon{width:24px;height:24px}
+  .real-icon .ui-icon{width:25px;height:25px}
+  .weather-icon .weather-symbol{width:58px;height:58px}
+  .wind-card .compass-pro{width:70px;height:70px;top:55px;right:3px}
+  .wind-card .compass-ring span{font-size:5.7px}
+  .wind-card .compass-ticks{inset:9px}
+  .wind-card .compass-needle{height:46px}
+  .wind-card .compass-needle i{border-left-width:7px;border-right-width:7px;border-bottom-width:23px}
+  .wind-card .compass-needle i:after{left:-5px;top:21px;border-left-width:5px;border-right-width:5px;border-top-width:20px}
+}
