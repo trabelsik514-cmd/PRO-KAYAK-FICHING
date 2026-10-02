@@ -1,10 +1,28 @@
-/* PRO KAYAK FISHING — professional data-source layer
-   Primary targets: ECMWF + Copernicus Marine + dedicated tide provider.
-   Secrets must NEVER be placed in client-side JS. */
+/* PRO KAYAK FISHING — verified data-source declaration
+   Client-side secrets are intentionally not stored in this file. */
 const DATA_SOURCES={
- weather:{primary:"ECMWF IFS/AIFS",fallback:"Open-Meteo",status:"fallback-active"},
- waves:{primary:"Copernicus Marine Global Waves",fallback:"Open-Meteo Marine",status:"fallback-active"},
- ocean:{primary:"Copernicus Marine Global Ocean Physics",fallback:"Open-Meteo Marine",status:"fallback-active"},
- tides:{primary:"Dedicated tide service",fallback:"none",status:"requires-server-key"}
+  weather:{
+    primary:"ECMWF IFS HRES via Open-Meteo",
+    endpoint:"api.open-meteo.com/v1/forecast",
+    model:"ecmwf_ifs025",
+    status:"active"
+  },
+  waves:{
+    primary:"Open-Meteo Marine model",
+    endpoint:"marine-api.open-meteo.com/v1/marine",
+    status:"active"
+  },
+  ocean:{
+    primary:"Open-Meteo Marine ocean-current model",
+    endpoint:"marine-api.open-meteo.com/v1/marine",
+    status:"active"
+  },
+  tides:{
+    primary:"Open-Meteo modelled sea-level height including tides",
+    endpoint:"marine-api.open-meteo.com/v1/marine",
+    status:"modelled-not-dedicated-tide-provider",
+    note:"Coastal accuracy is limited; not a navigation-grade tide source."
+  }
 };
+
 function getDataSourceStatus(){return DATA_SOURCES}
