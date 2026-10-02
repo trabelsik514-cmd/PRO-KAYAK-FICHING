@@ -66,3 +66,47 @@ button,input{max-width:100%}
 .wind-real{background-image:none;mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/wind.svg") center/70% 70% no-repeat;-webkit-mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/wind.svg") center/70% 70% no-repeat;background-color:#37cfff}
 .wave-real{background-image:none;mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/waves.svg") center/70% 70% no-repeat;-webkit-mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/waves.svg") center/70% 70% no-repeat;background-color:#37cfff}
 \n@media(max-width:480px){.compass{width:82px;height:82px;top:40px}.compass-needle{height:58px}.compass-degree{bottom:-19px}}\n
+
+/* Compass v2 — separated layout: no overlap with wind values */
+.info-card:first-child{position:relative}
+.info-card:first-child .compass{
+  top:auto;
+  bottom:34px;
+  right:12px;
+  left:auto;
+  transform:none;
+  width:82px;
+  height:82px;
+}
+.info-card:first-child>strong,
+.info-card:first-child>span{
+  display:block;
+  width:calc(100% - 94px);
+  padding-inline-end:0;
+}
+.info-card:first-child>small{
+  margin-top:30px;
+  padding-inline-end:94px;
+}
+.info-card:first-child>b{
+  padding-inline-end:94px;
+}
+@media(max-width:480px){
+  .info-card:first-child .compass{width:72px;height:72px;right:9px;bottom:30px}
+  .info-card:first-child>strong,
+  .info-card:first-child>span{width:calc(100% - 82px)}
+  .info-card:first-child>small{padding-inline-end:82px;margin-top:24px}
+  .info-card:first-child>b{padding-inline-end:82px}
+  .compass-ring span{font-size:7px}
+  .compass-needle{height:52px}
+  .compass-needle i{border-left-width:7px;border-right-width:7px;border-bottom-width:23px}
+  .compass-needle i:after{left:-5px;top:21px;border-left-width:5px;border-right-width:5px;border-top-width:20px}
+  .compass-degree{bottom:-17px;font-size:8px}
+}
+@media(max-width:360px){
+  .info-card:first-child .compass{width:66px;height:66px;right:7px;bottom:28px}
+  .info-card:first-child>strong,
+  .info-card:first-child>span{width:calc(100% - 75px)}
+  .info-card:first-child>small{padding-inline-end:75px}
+  .info-card:first-child>b{padding-inline-end:75px}
+}
