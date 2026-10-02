@@ -927,3 +927,45 @@ svg.moon-symbol{
     font-size:5.2px!important;
   }
 }
+
+/* FINAL MOBILE ICON NORMALIZATION */
+svg.ui-icon,svg.weather-symbol,svg.hour-weather-svg,svg.moon-symbol{
+ display:block!important;overflow:visible!important;
+}
+.real-icon,.card-title>.ui-icon,.weather-meta .ui-icon{
+ background:transparent!important;border:0!important;box-shadow:none!important;
+}
+.real-icon{display:grid!important;place-items:center!important;width:34px!important;height:34px!important}
+.real-icon .ui-icon{width:30px!important;height:30px!important}
+.card-title>.ui-icon{width:28px!important;height:28px!important}
+.weather-meta .ui-icon{width:24px!important;height:24px!important}
+.weather-icon{display:grid!important;place-items:center!important;background:none!important;border:0!important}
+.weather-icon .weather-symbol{width:72px!important;height:72px!important}
+.hour-weather-svg{width:30px!important;height:30px!important}
+.bottom-nav .ui-icon{width:26px!important;height:26px!important}
+.wind-card .wind-data{
+ display:grid!important;grid-template-columns:minmax(0,1fr) 72px!important;
+ align-items:center!important;gap:8px!important;min-height:125px!important;
+}
+.wind-card .compass-pro{
+ position:relative!important;inset:auto!important;transform:none!important;
+ width:68px!important;height:68px!important;margin:0 auto!important;
+ z-index:3!important;
+}
+.wind-card .compass-needle{z-index:5!important}
+.wind-card .compass-degree{z-index:8!important}
+@media(max-width:700px){
+ .weather-icon .weather-symbol{width:60px!important;height:60px!important}
+ .real-icon{width:29px!important;height:29px!important;flex-basis:29px!important}
+ .real-icon .ui-icon{width:26px!important;height:26px!important}
+ .card-title>.ui-icon{width:24px!important;height:24px!important}
+ .weather-meta .ui-icon{width:22px!important;height:22px!important}
+ .wind-card .wind-data{grid-template-columns:minmax(0,1fr) 62px!important;gap:5px!important}
+ .wind-card .compass-pro{width:58px!important;height:58px!important}
+ .wind-card .compass-needle{height:39px!important}
+}
+@media(max-width:390px){
+ .wind-card .wind-data{grid-template-columns:minmax(0,1fr) 56px!important}
+ .wind-card .compass-pro{width:53px!important;height:53px!important}
+ .wind-card .compass-needle{height:35px!important}
+}
