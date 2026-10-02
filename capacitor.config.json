@@ -1,1 +1,6 @@
-{"appId":"com.prokayakfishing.app","appName":"PRO KAYAK FISHING","webDir":".","server":{"androidScheme":"https"}}
+{
+  "appId":"com.prokayakfishing.app",
+  "appName":"PRO KAYAK FISHING",
+  "webDir":"www",
+  "server":{"androidScheme":"https"}
+}
