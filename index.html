@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07141b">
+<title>PRO KAYAK FISHING</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/logo.jpg" alt="PRO KAYAK FISHING"><div><b>PRO KAYAK</b><span>FISHING</span></div></div>
+  <button id="langBtn" class="lang">FR</button>
+</header>
+<main>
+  <section class="hero">
+    <div><div class="eyebrow" data-ar="حالة البحر والطقس" data-fr="Météo & mer">حالة البحر والطقس</div>
+    <h1 data-ar="الطقس أولاً، ثم رحلة الصيد" data-fr="La météo d'abord, puis la sortie">الطقس أولاً، ثم رحلة الصيد</h1>
+    <p id="place">تحديد الموقع...</p></div>
+    <button id="gps" class="gps">⌖</button>
+  </section>
+  <section class="weather-grid" id="weather">
+    <article class="card main-temp"><span data-ar="الحرارة" data-fr="Température">الحرارة</span><strong id="temp">--°</strong><small id="condition">--</small></article>
+    <article class="card"><span>💨 <i data-ar="الرياح" data-fr="Vent">الرياح</i></span><strong id="wind">--</strong><small id="gust">هبات --</small></article>
+    <article class="card"><span>🌊 <i data-ar="الموج" data-fr="Vagues">الموج</i></span><strong id="wave">--</strong><small id="period">الفترة --</small></article>
+    <article class="card"><span>🧭 <i data-ar="الاتجاه" data-fr="Direction">الاتجاه</i></span><strong id="winddir">--</strong><small id="wavedir">الموج --</small></article>
+    <article class="card"><span>🌧️ <i data-ar="الأمطار" data-fr="Pluie">الأمطار</i></span><strong id="rain">--</strong><small>mm</small></article>
+    <article class="card"><span>🔽 <i data-ar="الضغط" data-fr="Pression">الضغط</i></span><strong id="pressure">--</strong><small>hPa</small></article>
+  </section>
+  <section class="tide card">
+    <div class="section-title"><span>🌊</span><div><h2 data-ar="المد والجزر" data-fr="Marées">المد والجزر</h2><p data-ar="سيتم ربط مصدر مد وجزر حقيقي للموقع" data-fr="Une source réelle des marées sera connectée">سيتم ربط مصدر مد وجزر حقيقي للموقع</p></div></div>
+    <div class="tide-row"><div><small data-ar="الحالة" data-fr="État">الحالة</small><b data-ar="بيانات المصدر قيد الربط" data-fr="Source en cours de connexion">بيانات المصدر قيد الربط</b></div><div><small data-ar="المد القادم" data-fr="Prochaine marée haute">المد القادم</small><b>--</b></div><div><small data-ar="الجزر القادم" data-fr="Prochaine marée basse">الجزر القادم</small><b>--</b></div></div>
+  </section>
+  <section class="times card"><div><span>🌅</span><small data-ar="الشروق" data-fr="Lever">الشروق</small><b id="sunrise">--:--</b></div><div><span>🌇</span><small data-ar="الغروب" data-fr="Coucher">الغروب</small><b id="sunset">--:--</b></div></section>
+  <div id="map"></div>
+</main>
+<footer><span>PRO KAYAK FISHING</span><span data-ar="اختر موقعًا من الخريطة لتحديث الطقس" data-fr="Touchez la carte pour changer le lieu">اختر موقعًا من الخريطة لتحديث الطقس</span></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/app.js"></script>
+</body></html>
