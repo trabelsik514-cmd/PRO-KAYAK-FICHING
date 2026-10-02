@@ -275,3 +275,110 @@ body{background:#020f18;color:#f4fbff}
  .compass-pro{right:6px;top:66px;width:69px;height:69px}
  .wind-card .wind-data{padding-right:78px}
 }
+
+/* === MOBILE FINAL FIX: stable 3-card layout + clean icon treatment === */
+.card-title>.ui-icon{
+  width:30px;height:30px;display:block;
+  background:none!important;border:0!important;box-shadow:none!important;
+  border-radius:0;color:#42d5ff;padding:0;
+}
+.real-icon{
+  flex:0 0 32px;
+}
+.weather-meta svg{
+  background:none!important;border:0!important;box-shadow:none!important;
+}
+@media(max-width:700px){
+  .hero-weather{
+    grid-template-columns:64px minmax(0,1fr);
+    align-items:center;
+    min-height:0;
+  }
+  .weather-meta{
+    grid-column:1/-1;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    width:100%;
+    min-width:0;
+  }
+  .weather-meta div{
+    grid-template-columns:1fr;
+    justify-items:center;
+    text-align:center;
+    min-width:0;
+    gap:2px;
+  }
+  .weather-meta svg{width:24px;height:24px}
+  .weather-meta b{grid-column:auto;font-size:11px}
+  .weather-meta span{font-size:10px;white-space:nowrap}
+  .three-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    align-items:stretch;
+  }
+  .three-grid>.info-card,.three-grid>.sea-card{
+    grid-column:auto!important;
+    width:100%;
+    min-width:0;
+    overflow:hidden;
+  }
+  .wind-card .wind-data{
+    display:block;
+    position:relative;
+    min-height:125px;
+    padding:0!important;
+  }
+  .wind-card .wind-values{
+    padding-inline-end:0;
+    padding-top:4px;
+    max-width:100%;
+  }
+  .wind-card .wind-values #wind{font-size:22px;white-space:nowrap}
+  .wind-card .wind-values #gust{font-size:8px;white-space:nowrap}
+  .wind-card .wind-direction-text{margin-top:7px}
+  .wind-card .compass{
+    right:3px!important;
+    top:69px!important;
+    width:58px!important;
+    height:58px!important;
+  }
+  .wind-card .compass-ring span{font-size:5.5px}
+  .wind-card .compass-ticks{inset:7px}
+  .wind-card .compass-needle{height:38px}
+  .wind-card .compass-degree{bottom:-14px;font-size:6px}
+  .marine-card .marine-extra{
+    display:flex;
+    gap:3px;
+    margin-top:8px;
+    overflow:hidden;
+  }
+  .marine-card .marine-extra span{
+    min-width:0;
+    flex:1;
+    justify-content:center;
+    padding:3px;
+  }
+  .marine-card .marine-extra b{font-size:7px;white-space:nowrap}
+  .marine-card .marine-extra svg{width:12px;height:12px}
+  .info-card>strong{font-size:23px}
+  .info-card>small{margin-top:13px;font-size:7.5px}
+  .info-card>b{font-size:10px}
+  .sea-card strong{font-size:20px;margin:22px 0 10px}
+  .sea-status{font-size:7.5px;padding:5px 6px;white-space:nowrap}
+}
+@media(max-width:390px){
+  .topbar{height:70px}
+  .brand img{width:44px;height:44px}
+  .brand b{font-size:14px}.brand span{font-size:9px}
+  .lang{padding:6px 8px}
+  .hero-weather{grid-template-columns:58px minmax(0,1fr);padding:11px}
+  .weather-icon,.weather-icon .weather-symbol{width:56px;height:56px}
+  .temp-block strong{font-size:34px}
+  .three-grid{gap:5px;margin-inline:8px;width:calc(100% - 16px)}
+  .info-card,.sea-card{padding:8px 6px;border-radius:16px}
+  .card-title{gap:3px}.card-title h2{font-size:11px}
+  .card-title>.ui-icon{width:22px;height:22px}
+  .real-icon{flex-basis:27px;width:27px;height:27px}
+  .real-icon .ui-icon{width:18px;height:18px}
+  .wind-card .compass{width:52px!important;height:52px!important;right:2px!important;top:68px!important}
+  .wind-card .wind-values #wind{font-size:19px}
+  .marine-card>strong{font-size:21px}
+}
