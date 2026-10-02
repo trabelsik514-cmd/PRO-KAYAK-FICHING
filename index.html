@@ -18,7 +18,8 @@
 <main>
   <section class="location-row">
     <button id="gps" class="location-pill"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#crosshair"></use></svg><span id="place">تحديد الموقع...</span><b>⌄</b></button>
-    <div class="search-pill"><svg class="ui-icon search-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#search"></use></svg><input id="searchPlace" data-ar-placeholder="ابحث عن منطقة أخرى..." data-fr-placeholder="Rechercher une autre zone..." placeholder="ابحث عن منطقة أخرى..."></div>
+    <div class="search-pill"><button id="searchBtn" class="search-action" type="button" aria-label="بحث"><svg class="ui-icon search-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#search"></use></svg></button><input id="searchPlace" data-ar-placeholder="ابحث عن منطقة أخرى..." data-fr-placeholder="Rechercher une autre zone..." placeholder="ابحث عن منطقة أخرى..."></div>
+    <div id="searchResults" class="search-results" hidden></div>
     <input id="datePicker" class="date-pill" type="date">
   </section>
 
