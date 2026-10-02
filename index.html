@@ -15,8 +15,8 @@
   <button id="langBtn" class="lang"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#language"></use></svg><span>FR</span></button>
 </header>
 
-<main>
-  <section class="location-row">
+<main id="homeSection">
+  <section id="locationSection" class="location-row">
     <button id="gps" class="location-pill"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#crosshair"></use></svg><span id="place">تحديد الموقع...</span><b>⌄</b></button>
     <div class="search-pill"><button id="searchBtn" class="search-action" type="button" aria-label="بحث"><svg class="ui-icon search-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#search"></use></svg></button><input id="searchPlace" data-ar-placeholder="ابحث عن منطقة أخرى..." data-fr-placeholder="Rechercher une autre zone..." placeholder="ابحث عن منطقة أخرى..."></div>
     <div id="searchResults" class="search-results" hidden></div>
@@ -25,7 +25,7 @@
 
   <section class="current-weather card hero-weather">
     <div class="weather-icon" id="weatherIcon"></div>
-    <div class="temp-block"><small data-ar="الطقس الآن" data-fr="Météo maintenant">الطقس الآن</small><strong id="temp">--°C</strong><span id="condition">--</span><em id="feels">--</em></div>
+    <div class="temp-block"><small id="weatherTitle" data-ar="الطقس الآن" data-fr="Météo maintenant">الطقس الآن</small><strong id="temp">--°C</strong><span id="condition">--</span><em id="feels">--</em></div>
     <div class="weather-meta">
       <div><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#droplet"></use></svg><span data-ar="الرطوبة" data-fr="Humidité">الرطوبة</span><b id="humidity">--%</b></div>
       <div><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#gauge"></use></svg><span data-ar="الضغط" data-fr="Pression">الضغط</span><b id="pressure">-- hPa</b></div>
@@ -33,7 +33,7 @@
     </div>
   </section>
 
-  <section class="three-grid">
+  <section id="marineSection" class="three-grid">
     <article class="card info-card wind-card">
   <div class="card-title"><span class="real-icon wind-real"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#wind"></use></svg></span><h2 data-ar="الرياح" data-fr="Vent">الرياح</h2></div>
   <div class="wind-data">
@@ -67,7 +67,7 @@
     <article class="card mini-card"><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#moon"></use></svg><h2 data-ar="القمر" data-fr="Lune">القمر</h2></div><div class="moon-box"><span id="moonVisual" class="moon-visual"></span><div><small data-ar="الطور" data-fr="Phase">الطور</small><b id="moonPhase">--</b></div><div><small data-ar="الإضاءة" data-fr="Illumination">الإضاءة</small><b id="moonIllum">--%</b></div></div></article>
   </section>
 
-  <section class="card fishing-score"><div><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#fish"></use></svg><h2 data-ar="مؤشر الصيد بالكياك" data-fr="Indice pêche en kayak">مؤشر الصيد بالكياك</h2></div><div class="score-row"><div class="gauge"><svg viewBox="0 0 120 70"><path class="gauge-bg" d="M15 60a45 45 0 0 1 90 0"/><path id="gaugeFill" class="gauge-fill" d="M15 60a45 45 0 0 1 90 0"/></svg><b id="score">--</b><span>/100</span></div><div class="checks"><p>✓ <span data-ar="الرياح" data-fr="Vent">الرياح</span><b id="windCheck">--</b></p><p>✓ <span data-ar="الموج" data-fr="Vagues">الموج</span><b id="waveCheck">--</b></p><p>✓ <span data-ar="الطقس" data-fr="Météo">الطقس</span><b id="weatherCheck">--</b></p><p>✓ <span data-ar="المد" data-fr="Marée">المد</span><b id="tideCheck">--</b></p></div></div></div><aside class="best-hours"><h3 data-ar="أفضل ساعات الصيد اليوم" data-fr="Meilleures heures de pêche">أفضل ساعات الصيد اليوم</h3><div><b id="best1">06:00 – 08:00</b><span>☀️</span></div><div><b id="best2">17:00 – 19:00</b><span>🌇</span></div></aside></section>
+  <section id="fishingSection" class="card fishing-score"><div><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#fish"></use></svg><h2 data-ar="مؤشر الصيد بالكياك" data-fr="Indice pêche en kayak">مؤشر الصيد بالكياك</h2></div><div class="score-row"><div class="gauge"><svg viewBox="0 0 120 70"><path class="gauge-bg" d="M15 60a45 45 0 0 1 90 0"/><path id="gaugeFill" class="gauge-fill" d="M15 60a45 45 0 0 1 90 0"/></svg><b id="score">--</b><span>/100</span></div><div class="checks"><p>✓ <span data-ar="الرياح" data-fr="Vent">الرياح</span><b id="windCheck">--</b></p><p>✓ <span data-ar="الموج" data-fr="Vagues">الموج</span><b id="waveCheck">--</b></p><p>✓ <span data-ar="الطقس" data-fr="Météo">الطقس</span><b id="weatherCheck">--</b></p><p>✓ <span data-ar="المد" data-fr="Marée">المد</span><b id="tideCheck">--</b></p></div></div></div><aside class="best-hours"><h3 data-ar="أفضل ساعات الصيد اليوم" data-fr="Meilleures heures de pêche">أفضل ساعات الصيد اليوم</h3><div><b id="best1">06:00 – 08:00</b><span>☀️</span></div><div><b id="best2">17:00 – 19:00</b><span>🌇</span></div></aside></section>
 
   <section class="hours card"><h2 data-ar="ساعات اليوم" data-fr="Heures du jour">ساعات اليوم</h2><div id="hourly" class="hourly"></div></section>
 </main>
