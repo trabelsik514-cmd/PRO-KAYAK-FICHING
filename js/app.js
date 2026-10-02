@@ -409,6 +409,27 @@ async function load(){
       ?(state.lang==="ar"?"نموذجي":"Modélisé")
       :(state.lang==="ar"?"غير متوفر":"Indisponible");
 
+    // Kayak-specific safety summary: derived only from loaded weather/marine data.
+    const waveHeight=Number(m?.current?.wave_height);
+    const windKn=Number(w.selected.wind);
+    const kayakOk=Number.isFinite(waveHeight)&&Number.isFinite(windKn)&&waveHeight<1.2&&windKn<18;
+    const kayakCaution=Number.isFinite(waveHeight)&&Number.isFinite(windKn)&&waveHeight<1.8&&windKn<25;
+    const tripState=$("kayakTripState");
+    const risk=$("kayakRisk");
+    if(tripState){
+      tripState.textContent=kayakOk
+        ?(state.lang==="ar"?"مناسب":"Adapté")
+        :kayakCaution
+          ?(state.lang==="ar"?"حذر":"Prudence")
+          :(state.lang==="ar"?"غير مناسب":"Déconseillé");
+    }
+    if(risk){
+      risk.textContent=kayakOk
+        ?(state.lang==="ar"?"منخفض":"Faible")
+        :kayakCaution
+          ?(state.lang==="ar"?"متوسط":"Modéré")
+          :(state.lang==="ar"?"مرتفع":"Élevé");
+    }
     const md=moonData(state.date);
     $("moonVisual").className="moon-visual moon-phase-"+(Math.round(md.age/29.530588853*8)%8);
     $("moonVisual").innerHTML='<svg class="moon-symbol" aria-hidden="true"><use href="assets/icons/pro-icons.svg#moon"></use></svg>';
