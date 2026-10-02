@@ -1,0 +1,156 @@
+/* PRO KAYAK FISHING — high-fidelity mobile UI layer
+   Visual layer only: preserves existing data, IDs and behavior. */
+:root{
+  --pk-bg:#020c14;--pk-panel:#071d2a;--pk-panel2:#082638;--pk-line:#14506a;
+  --pk-cyan:#25d6ff;--pk-cyan2:#70efff;--pk-yellow:#ffd03f;--pk-green:#5ce26f;
+}
+html,body{background:var(--pk-bg)}
+body{
+  background:
+    radial-gradient(circle at 50% 12%,rgba(16,94,128,.24),transparent 34%),
+    linear-gradient(180deg,#03121d 0%,#020b12 100%);
+  overflow-x:hidden;
+}
+.topbar{
+  height:84px;padding:10px 14px;
+  grid-template-columns:44px 1fr auto;
+  background:rgba(2,13,21,.94);
+  border-bottom:1px solid #16465a;
+}
+.brand{gap:9px}
+.brand img{width:56px;height:56px;border:1px solid #1b7ea3;box-shadow:0 0 0 2px #061a26,0 5px 18px #0008}
+.brand b{font-size:19px;line-height:1.05}
+.brand span{font-size:13px}
+.lang{border:1px solid #2b6982;background:linear-gradient(180deg,#0b2636,#071a27);min-height:42px}
+.menu-btn{width:42px;height:42px;border-radius:14px}
+.location-row{padding:12px 12px 8px;grid-template-columns:1fr 1.2fr 1fr;gap:8px}
+.location-pill,.search-pill,.date-pill{
+  min-height:50px;border-radius:16px;background:linear-gradient(145deg,#092332,#061824);
+  border-color:#1e607b;box-shadow:inset 0 1px 0 #ffffff0a;
+}
+.location-pill{font-size:13px}
+.search-pill{padding:0 10px}
+.date-pill{font-size:13px}
+.card{
+  border-radius:21px;
+  border-color:#14516a;
+  background:linear-gradient(145deg,rgba(8,35,49,.98),rgba(4,19,29,.98));
+  box-shadow:0 10px 28px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.hero-weather{
+  margin:8px 12px 10px;padding:18px 16px;
+  min-height:174px;
+  grid-template-columns:86px 1fr 1.35fr;
+  background:
+    radial-gradient(circle at 20% 50%,rgba(255,187,63,.15),transparent 25%),
+    linear-gradient(125deg,#0b2e40,#071e2d);
+}
+.weather-icon{width:82px;height:82px}
+.weather-symbol{width:78px!important;height:78px!important}
+.temp-block strong{font-size:47px;font-weight:800;letter-spacing:-1px}
+.temp-block small{font-size:13px}
+.temp-block span{font-size:16px}
+.temp-block em{font-size:12px;padding:7px 11px}
+.weather-meta{gap:10px}
+.weather-meta div{grid-template-columns:27px 1fr auto}
+.weather-meta svg{width:23px;height:23px}
+.weather-meta b{font-size:14px}
+.three-grid{margin:0 12px 10px;gap:8px}
+.info-card{min-height:205px;padding:13px 12px}
+.card-title{gap:7px}
+.card-title svg,.real-icon svg{width:27px;height:27px}
+.card-title h2{font-size:16px}
+.info-card>strong{font-size:30px;margin-top:14px}
+.wind-card .wind-data{min-height:140px}
+.compass{width:88px;height:88px;top:74px}
+.marine-card>strong{font-size:31px;margin-top:16px}
+.marine-card .marine-extra{position:absolute;bottom:10px;left:10px;right:10px}
+.sea-card{min-height:205px}
+.sea-card strong{font-size:28px;margin-top:30px}
+.sea-status{padding:8px 11px;font-size:11px}
+.celestial{margin:0 12px 10px;padding:13px}
+.section-title h2{font-size:18px}
+.section-title p{font-size:10px}
+.chart-wrap{height:255px}
+.legend{font-size:10px;gap:9px}
+.three-grid.lower{grid-template-columns:repeat(3,1fr)}
+.lower .mini-card{min-height:175px;padding:13px 11px}
+.lower .mini-card .card-title h2{font-size:15px}
+.moon-visual{width:58px;height:58px}
+.fishing-score{
+  margin:0 12px 10px;padding:15px;
+  border-color:#2f873d;
+  background:linear-gradient(145deg,#052a25,#041a1b);
+}
+.fishing-score .card-title h2{font-size:18px}
+.score-row{gap:12px}
+.gauge{width:130px}
+.gauge b{font-size:31px}
+.gauge-fill{stroke:#65e632}
+.checks{font-size:12px}
+.best-hours{border-right:1px solid #1c4d47;padding-right:13px}
+.best-hours h3{font-size:15px}
+.best-hours>div{background:#061d1e;border-radius:12px;padding:8px 9px;margin-top:7px}
+.best-hours .ui-icon{width:22px;height:22px}
+.hours{margin:0 12px 105px;padding:14px}
+.hours h2{font-size:18px}
+.hourly{gap:7px;overflow-x:auto;padding-bottom:3px}
+.hour{
+  min-width:75px;padding:12px 7px;border-radius:14px;
+  background:linear-gradient(180deg,#0a2737,#061a27);
+  border:1px solid #0f4258;
+}
+.hour-weather-svg{width:29px;height:29px}
+.bottom-nav{
+  height:86px;padding:8px 7px calc(8px + env(safe-area-inset-bottom));
+  background:rgba(2,15,24,.96);border-top:1px solid #17475c;
+  backdrop-filter:blur(18px);
+}
+.bottom-nav a{min-width:0;gap:4px;font-size:10px;color:#8caab6}
+.bottom-nav a svg{width:27px;height:27px}
+.bottom-nav a.active{
+  color:#e9fbff;background:linear-gradient(180deg,#0c4360,#06324b);
+  border:1px solid #0b79a4;border-radius:17px;
+  box-shadow:0 6px 20px #0005;
+}
+.bottom-nav a.active svg{color:var(--pk-cyan)}
+/* New dashboard cards matching the reference concept */
+.kayak-detail-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 12px 10px;
+}
+.kayak-detail-card{
+  min-height:150px;padding:14px;border-radius:20px;
+  background:linear-gradient(145deg,#082b3b,#061923);
+  border:1px solid #15546b;
+}
+.kayak-detail-card.green{
+  background:linear-gradient(145deg,#052c28,#041a1b);border-color:#2b743a;
+}
+.kayak-detail-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.kayak-detail-head svg{width:28px;height:28px;color:var(--pk-cyan)}
+.kayak-detail-head h3{margin:0;font-size:15px}
+.kayak-detail-value{font-size:28px;font-weight:800;line-height:1.1}
+.kayak-detail-label{display:block;color:#8caab5;font-size:11px;margin-top:6px}
+.kayak-detail-row{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+.kayak-detail-row span{color:#8caab5;font-size:11px}
+.kayak-detail-row b{font-size:13px}
+.species-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:9px}
+.species-chip{padding:7px 4px;border:1px solid #17516a;border-radius:12px;background:#061923;text-align:center}
+.species-chip svg{width:25px;height:25px;color:#55ddff}
+.species-chip span{display:block;font-size:9px;color:#c7dbe2;margin-top:2px}
+@media(max-width:390px){
+  .hero-weather{grid-template-columns:72px 1fr 1.15fr}
+  .temp-block strong{font-size:41px}
+  .weather-meta span,.weather-meta b{font-size:11px}
+  .three-grid{gap:6px}
+  .info-card{padding:11px 9px}
+  .info-card>strong{font-size:27px}
+  .compass{width:78px;height:78px}
+  .compass-ring{transform:scale(.9)}
+  .lower .mini-card{min-height:160px}
+}
+@media(min-width:700px){
+  main{max-width:760px;margin:auto}
+  .topbar{max-width:760px;margin:auto}
+  .bottom-nav{max-width:760px;left:50%;transform:translateX(-50%);right:auto;width:100%}
+}

@@ -7,6 +7,7 @@
 <title>PRO KAYAK FISHING</title>
 <link rel="icon" href="assets/logo.svg">
 <link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/pro-ui.css?v=1">
 </head>
 <body>
 <header class="topbar">
@@ -68,6 +69,30 @@
   </section>
 
   <section id="fishingSection" class="card fishing-score"><div><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#fish"></use></svg><h2 data-ar="مؤشر الصيد بالكياك" data-fr="Indice pêche en kayak">مؤشر الصيد بالكياك</h2></div><div class="score-row"><div class="gauge"><svg viewBox="0 0 120 70"><path class="gauge-bg" d="M15 60a45 45 0 0 1 90 0"/><path id="gaugeFill" class="gauge-fill" d="M15 60a45 45 0 0 1 90 0"/></svg><b id="score">--</b><span>/100</span></div><div class="checks"><p>✓ <span data-ar="الرياح" data-fr="Vent">الرياح</span><b id="windCheck">--</b></p><p>✓ <span data-ar="الموج" data-fr="Vagues">الموج</span><b id="waveCheck">--</b></p><p>✓ <span data-ar="الطقس" data-fr="Météo">الطقس</span><b id="weatherCheck">--</b></p><p>✓ <span data-ar="المد" data-fr="Marée">المد</span><b id="tideCheck">--</b></p></div></div></div><aside class="best-hours"><h3 data-ar="أفضل ساعات الصيد اليوم" data-fr="Meilleures heures de pêche">أفضل ساعات الصيد اليوم</h3><div><b id="best1">06:00 – 08:00</b><span><svg class="ui-icon" aria-hidden="true"><use href="assets/icons/pro-icons.svg#sun"></use></svg></span></div><div><b id="best2">17:00 – 19:00</b><span><svg class="ui-icon" aria-hidden="true"><use href="assets/icons/pro-icons.svg#sun-moon"></use></svg></span></div></aside></section>
+
+  <section class="kayak-detail-grid" aria-label="تفاصيل صيد الكياك">
+    <article class="kayak-detail-card green">
+      <div class="kayak-detail-head"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#navigation"></use></svg><h3 data-ar="حالة الكياك" data-fr="État kayak">حالة الكياك</h3></div>
+      <div class="kayak-detail-value" id="kayakTripState">مناسب</div>
+      <span class="kayak-detail-label" data-ar="حسب الرياح والموج والتيارات" data-fr="Selon vent, vagues et courants">حسب الرياح والموج والتيارات</span>
+      <div class="kayak-detail-row"><span data-ar="مستوى الخطر" data-fr="Risque">مستوى الخطر</span><b id="kayakRisk">منخفض</b></div>
+    </article>
+    <article class="kayak-detail-card">
+      <div class="kayak-detail-head"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#map-pin"></use></svg><h3 data-ar="العودة للشاطئ" data-fr="Retour plage">العودة للشاطئ</h3></div>
+      <div class="kayak-detail-value" id="shoreDistance">-- km</div>
+      <span class="kayak-detail-label" data-ar="المسافة التقديرية من الموقع الحالي" data-fr="Distance estimée depuis la position">المسافة التقديرية من الموقع الحالي</span>
+      <div class="kayak-detail-row"><span data-ar="الحالة" data-fr="Statut">الحالة</span><b id="shoreStatus">GPS</b></div>
+    </article>
+    <article class="kayak-detail-card" style="grid-column:1/-1">
+      <div class="kayak-detail-head"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#fish"></use></svg><h3 data-ar="الأسماك المستهدفة" data-fr="Espèces ciblées">الأسماك المستهدفة</h3></div>
+      <div class="species-strip">
+        <div class="species-chip"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#fish"></use></svg><span>Daurade</span></div>
+        <div class="species-chip"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#fish"></use></svg><span>Loup</span></div>
+        <div class="species-chip"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#fish"></use></svg><span>Sar</span></div>
+        <div class="species-chip"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#fish"></use></svg><span data-ar="ماكرو" data-fr="Maquereau">ماكرو</span></div>
+      </div>
+    </article>
+  </section>
 
   <section class="hours card"><h2 data-ar="ساعات اليوم" data-fr="Heures du jour">ساعات اليوم</h2><div id="hourly" class="hourly"></div></section>
 </main>
