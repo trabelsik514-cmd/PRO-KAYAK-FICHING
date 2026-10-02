@@ -3,37 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07141b">
+<meta name="theme-color" content="#03131e">
 <title>PRO KAYAK FISHING</title>
 <link rel="icon" href="assets/logo.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="topbar">
+  <button class="menu-btn" aria-label="القائمة"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <div class="brand"><img src="assets/logo.svg" alt="PRO KAYAK FISHING"><div><b>PRO KAYAK</b><span>FISHING</span></div></div>
-  <button id="langBtn" class="lang">FR</button>
+  <button id="langBtn" class="lang"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span>FR</span></button>
 </header>
+
 <main>
-  <section class="hero">
-    <div><div class="eyebrow" data-ar="حالة البحر والطقس" data-fr="Météo & mer">حالة البحر والطقس</div>
-    <h1 data-ar="الطقس أولاً، ثم رحلة الصيد" data-fr="La météo d'abord, puis la sortie">الطقس أولاً، ثم رحلة الصيد</h1>
-    <p id="place">تحديد الموقع...</p></div>
-    <button id="gps" class="gps">⌖</button>
+  <section class="location-row">
+    <button id="gps" class="location-pill"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg><span id="place">تحديد الموقع...</span><b>⌄</b></button>
+    <div class="search-pill"><span>⌕</span><input id="searchPlace" data-ar-placeholder="ابحث عن منطقة أخرى..." data-fr-placeholder="Rechercher une autre zone..." placeholder="ابحث عن منطقة أخرى..."></div>
+    <input id="datePicker" class="date-pill" type="date">
   </section>
-  <section class="weather-grid" id="weather">
-    <article class="card main-temp"><span data-ar="الحرارة" data-fr="Température">الحرارة</span><strong id="temp">--°</strong><small id="condition">--</small></article>
-    <article class="card"><span>💨 <i data-ar="الرياح" data-fr="Vent">الرياح</i></span><strong id="wind">--</strong><small id="gust">هبات --</small></article>
-    <article class="card"><span>🌊 <i data-ar="الموج" data-fr="Vagues">الموج</i></span><strong id="wave">--</strong><small id="period">الفترة --</small></article>
-    <article class="card"><span>🧭 <i data-ar="الاتجاه" data-fr="Direction">الاتجاه</i></span><strong id="winddir">--</strong><small id="wavedir">الموج --</small></article>
-    <article class="card"><span>🌧️ <i data-ar="الأمطار" data-fr="Pluie">الأمطار</i></span><strong id="rain">--</strong><small>mm</small></article>
-    <article class="card"><span>🔽 <i data-ar="الضغط" data-fr="Pression">الضغط</i></span><strong id="pressure">--</strong><small>hPa</small></article>
+
+  <section class="current-weather card hero-weather">
+    <div class="weather-icon" id="weatherIcon"></div>
+    <div class="temp-block"><small data-ar="الطقس الآن" data-fr="Météo maintenant">الطقس الآن</small><strong id="temp">--°C</strong><span id="condition">--</span><em id="feels">--</em></div>
+    <div class="weather-meta">
+      <div><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg><span data-ar="الرطوبة" data-fr="Humidité">الرطوبة</span><b id="humidity">--%</b></div>
+      <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span data-ar="الضغط" data-fr="Pression">الضغط</span><b id="pressure">-- hPa</b></div>
+      <div><svg viewBox="0 0 24 24"><path d="M5 18h13M7 14h10M9 10h6"/><path d="M12 4v5"/></svg><span data-ar="المطر" data-fr="Pluie">المطر</span><b id="rain">-- mm</b></div>
+    </div>
   </section>
-  <section class="tide card">
-    <div class="section-title"><span>🌊</span><div><h2 data-ar="المد والجزر" data-fr="Marées">المد والجزر</h2><p data-ar="سيتم ربط مصدر مد وجزر حقيقي للموقع" data-fr="Une source réelle des marées sera connectée">سيتم ربط مصدر مد وجزر حقيقي للموقع</p></div></div>
-    <div class="tide-row"><div><small data-ar="الحالة" data-fr="État">الحالة</small><b data-ar="بيانات المصدر قيد الربط" data-fr="Source en cours de connexion">بيانات المصدر قيد الربط</b></div><div><small data-ar="المد القادم" data-fr="Prochaine marée haute">المد القادم</small><b>--</b></div><div><small data-ar="الجزر القادم" data-fr="Prochaine marée basse">الجزر القادم</small><b>--</b></div></div>
+
+  <section class="three-grid">
+    <article class="card info-card"><div class="card-title"><svg viewBox="0 0 24 24"><path d="M3 8c5 0 5-4 10-4s5 4 8 4M3 13c5 0 5-4 10-4s5 4 8 4M3 18c5 0 5-4 10-4s5 4 8 4"/></svg><h2 data-ar="الرياح" data-fr="Vent">الرياح</h2></div><strong id="wind">-- nd</strong><span id="gust">هبات -- nd</span><div class="compass"><span>N</span><span>E</span><span>S</span><span>W</span><i id="windArrow"></i></div><small data-ar="اتجاه الرياح" data-fr="Direction du vent">اتجاه الرياح</small><b id="winddir">--°</b></article>
+    <article class="card info-card"><div class="card-title"><svg viewBox="0 0 24 24"><path d="M3 9c3-5 6 5 9 0s6 5 9 0M3 14c3-5 6 5 9 0s6 5 9 0M3 19c3-5 6 5 9 0s6 5 9 0"/></svg><h2 data-ar="الموج" data-fr="Vagues">الموج</h2></div><strong id="wave">-- m</strong><span id="period">الفترة -- s</span><div class="wave-arrow">↗</div><small data-ar="اتجاه الموج" data-fr="Direction des vagues">اتجاه الموج</small><b id="wavedir">--°</b></article>
+    <article class="card sea-card"><div class="card-title"><svg viewBox="0 0 24 24"><path d="M3 12c3-5 6 5 9 0s6 5 9 0M3 17c3-5 6 5 9 0s6 5 9 0"/></svg><h2 data-ar="حالة البحر" data-fr="État de la mer">حالة البحر</h2></div><strong id="seaState">--</strong><div class="sea-status" id="kayakStatus">--</div></article>
   </section>
-  <section class="times card"><div><span>🌅</span><small data-ar="الشروق" data-fr="Lever">الشروق</small><b id="sunrise">--:--</b></div><div><span>🌇</span><small data-ar="الغروب" data-fr="Coucher">الغروب</small><b id="sunset">--:--</b></div></section>
+
+  <section class="card celestial">
+    <div class="section-head"><div class="section-title"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"/><path d="M14 6a7 7 0 1 0 4 12 8 8 0 0 1-4-12z"/></svg><div><h2 data-ar="الشمس والقمر والمد والجزر" data-fr="Soleil, lune et marées">الشمس والقمر والمد والجزر</h2><p data-ar="المسار اليومي حسب الموقع والتاريخ" data-fr="Évolution quotidienne selon le lieu et la date">المسار اليومي حسب الموقع والتاريخ</p></div></div><div class="tabs"><button class="active">اليوم</button><button>غدًا</button></div></div>
+    <div class="chart-wrap"><svg id="skyChart" viewBox="0 0 900 300" preserveAspectRatio="none" aria-label="رسم الشمس والقمر والمد والجزر"></svg></div>
+    <div class="legend"><span><i class="dot tide-dot"></i><span data-ar="المد والجزر" data-fr="Marées">المد والجزر</span></span><span><i class="dot sun-dot"></i><span data-ar="مسار الشمس" data-fr="Trajet du soleil">مسار الشمس</span></span><span><i class="dot moon-dot"></i><span data-ar="مسار القمر" data-fr="Trajet de la lune">مسار القمر</span></span></div>
+  </section>
+
+  <section class="three-grid lower">
+    <article class="card mini-card"><div class="card-title"><svg viewBox="0 0 24 24"><path d="M3 12c3-5 6 5 9 0s6 5 9 0"/><path d="M12 3v18"/></svg><h2 data-ar="المد والجزر" data-fr="Marées">المد والجزر</h2></div><div class="two-values"><div><small data-ar="المد القادم" data-fr="Prochaine marée haute">المد القادم</small><b id="nextHigh">غير متوفر</b></div><div><small data-ar="الجزر القادم" data-fr="Prochaine marée basse">الجزر القادم</small><b id="nextLow">غير متوفر</b></div></div><p class="muted" data-ar="لا نعرض أوقاتًا وهمية. سيتم ربط مصدر مد وجزر حقيقي." data-fr="Aucune donnée de marée inventée. Une source réelle sera connectée.">لا نعرض أوقاتًا وهمية. سيتم ربط مصدر مد وجزر حقيقي.</p></article>
+    <article class="card mini-card"><div class="card-title"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2"/></svg><h2 data-ar="الشمس" data-fr="Soleil">الشمس</h2></div><div class="sun-times"><div><small data-ar="الشروق" data-fr="Lever">الشروق</small><b id="sunrise">--:--</b></div><div><small data-ar="الغروب" data-fr="Coucher">الغروب</small><b id="sunset">--:--</b></div></div><p id="dayLength" class="muted">--</p></article>
+    <article class="card mini-card"><div class="card-title"><svg viewBox="0 0 24 24"><path d="M16 3a8 8 0 1 0 5 14A8 8 0 0 1 16 3z"/></svg><h2 data-ar="القمر" data-fr="Lune">القمر</h2></div><div class="moon-box"><span id="moonVisual">◐</span><div><small data-ar="الطور" data-fr="Phase">الطور</small><b id="moonPhase">--</b></div><div><small data-ar="الإضاءة" data-fr="Illumination">الإضاءة</small><b id="moonIllum">--%</b></div></div></article>
+  </section>
+
+  <section class="card fishing-score"><div><div class="card-title"><svg viewBox="0 0 24 24"><path d="M3 12c4-7 12-7 18 0-6 7-14 7-18 0z"/><circle cx="9" cy="11" r="1"/><path d="M18 8l3-3"/></svg><h2 data-ar="مؤشر الصيد بالكياك" data-fr="Indice pêche en kayak">مؤشر الصيد بالكياك</h2></div><div class="score-row"><div class="gauge"><svg viewBox="0 0 120 70"><path class="gauge-bg" d="M15 60a45 45 0 0 1 90 0"/><path id="gaugeFill" class="gauge-fill" d="M15 60a45 45 0 0 1 90 0"/></svg><b id="score">--</b><span>/100</span></div><div class="checks"><p>✓ <span data-ar="الرياح" data-fr="Vent">الرياح</span><b id="windCheck">--</b></p><p>✓ <span data-ar="الموج" data-fr="Vagues">الموج</span><b id="waveCheck">--</b></p><p>✓ <span data-ar="الطقس" data-fr="Météo">الطقس</span><b id="weatherCheck">--</b></p><p>✓ <span data-ar="المد" data-fr="Marée">المد</span><b data-ar="متاح عند توفر المصدر" data-fr="Disponible avec la source">متاح عند توفر المصدر</b></p></div></div></div><aside class="best-hours"><h3 data-ar="أفضل ساعات الصيد اليوم" data-fr="Meilleures heures de pêche">أفضل ساعات الصيد اليوم</h3><div><b id="best1">06:00 – 08:00</b><span>☀️</span></div><div><b id="best2">17:00 – 19:00</b><span>🌇</span></div></aside></section>
+
+  <section class="hours card"><h2 data-ar="ساعات اليوم" data-fr="Heures du jour">ساعات اليوم</h2><div id="hourly" class="hourly"></div></section>
 </main>
-<footer><span>PRO KAYAK FISHING</span><span data-ar="حالة الطقس والبحر" data-fr="Météo & mer">حالة الطقس والبحر</span></footer>
+
+<nav class="bottom-nav">
+  <a class="active" href="#"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-ar="الرئيسية" data-fr="Accueil">الرئيسية</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"/></svg><span data-ar="الخريطة" data-fr="Carte">الخريطة</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M8 2v4M16 2v4M8 10h8"/></svg><span data-ar="مخطط الصيد" data-fr="Planner">مخطط الصيد</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M3 12c3-5 6 5 9 0s6 5 9 0M3 17c3-5 6 5 9 0s6 5 9 0"/></svg><span data-ar="البحر" data-fr="Mer">البحر</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M3 12c4-7 14-7 18 0-4 7-14 7-18 0z"/><circle cx="9" cy="11" r="1"/></svg><span data-ar="الأسماك" data-fr="Poissons">الأسماك</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11z"/><circle cx="12" cy="10" r="2"/></svg><span data-ar="المناطق" data-fr="Zones">المناطق</span></a>
+</nav>
 <script src="js/app.js"></script>
-</body></html>
+</body>
+</html>
