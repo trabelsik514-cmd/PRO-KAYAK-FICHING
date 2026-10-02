@@ -10,15 +10,15 @@
 </head>
 <body>
 <header class="topbar">
-  <button class="menu-btn" aria-label="القائمة"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/menu-2.svg" alt="" aria-hidden="true"></button>
+  <button class="menu-btn" aria-label="القائمة"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#menu-2"></use></svg></button>
   <div class="brand"><img src="assets/logo.svg" alt="PRO KAYAK FISHING"><div><b>PRO KAYAK</b><span>FISHING</span></div></div>
-  <button id="langBtn" class="lang"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/language.svg" alt="" aria-hidden="true"><span>FR</span></button>
+  <button id="langBtn" class="lang"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#language"></use></svg><span>FR</span></button>
 </header>
 
 <main>
   <section class="location-row">
-    <button id="gps" class="location-pill"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/crosshair.svg" alt="" aria-hidden="true"><span id="place">تحديد الموقع...</span><b>⌄</b></button>
-    <div class="search-pill"><img class="ui-icon search-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/search.svg" alt="" aria-hidden="true"><input id="searchPlace" data-ar-placeholder="ابحث عن منطقة أخرى..." data-fr-placeholder="Rechercher une autre zone..." placeholder="ابحث عن منطقة أخرى..."></div>
+    <button id="gps" class="location-pill"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#crosshair"></use></svg><span id="place">تحديد الموقع...</span><b>⌄</b></button>
+    <div class="search-pill"><svg class="ui-icon search-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#search"></use></svg><input id="searchPlace" data-ar-placeholder="ابحث عن منطقة أخرى..." data-fr-placeholder="Rechercher une autre zone..." placeholder="ابحث عن منطقة أخرى..."></div>
     <input id="datePicker" class="date-pill" type="date">
   </section>
 
@@ -26,15 +26,15 @@
     <div class="weather-icon" id="weatherIcon"></div>
     <div class="temp-block"><small data-ar="الطقس الآن" data-fr="Météo maintenant">الطقس الآن</small><strong id="temp">--°C</strong><span id="condition">--</span><em id="feels">--</em></div>
     <div class="weather-meta">
-      <div><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/droplet.svg" alt="" aria-hidden="true"><span data-ar="الرطوبة" data-fr="Humidité">الرطوبة</span><b id="humidity">--%</b></div>
-      <div><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/gauge.svg" alt="" aria-hidden="true"><span data-ar="الضغط" data-fr="Pression">الضغط</span><b id="pressure">-- hPa</b></div>
-      <div><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/cloud-rain.svg" alt="" aria-hidden="true"><span data-ar="المطر" data-fr="Pluie">المطر</span><b id="rain">-- mm</b></div>
+      <div><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#droplet"></use></svg><span data-ar="الرطوبة" data-fr="Humidité">الرطوبة</span><b id="humidity">--%</b></div>
+      <div><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#gauge"></use></svg><span data-ar="الضغط" data-fr="Pression">الضغط</span><b id="pressure">-- hPa</b></div>
+      <div><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#cloud-rain"></use></svg><span data-ar="المطر" data-fr="Pluie">المطر</span><b id="rain">-- mm</b></div>
     </div>
   </section>
 
   <section class="three-grid">
     <article class="card info-card wind-card">
-  <div class="card-title"><span class="real-icon wind-real"></span><h2 data-ar="الرياح" data-fr="Vent">الرياح</h2></div>
+  <div class="card-title"><span class="real-icon wind-real"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#wind"></use></svg></span><h2 data-ar="الرياح" data-fr="Vent">الرياح</h2></div>
   <div class="wind-data">
     <div class="wind-values">
       <strong id="wind">-- nd</strong>
@@ -50,34 +50,34 @@
     </div>
   </div>
 </article>
-    <article class="card info-card"><div class="card-title"><span class="real-icon wave-real"></span><h2 data-ar="الموج" data-fr="Vagues">الموج</h2></div><strong id="wave">-- m</strong><span id="period">الفترة -- s</span><div class="wave-arrow">↗</div><small data-ar="اتجاه الموج" data-fr="Direction des vagues">اتجاه الموج</small><b id="wavedir">--°</b></article>
-    <article class="card sea-card"><div class="card-title"><img class="ui-icon" src="assets/icons/waves.svg" alt="" aria-hidden="true"><h2 data-ar="حالة البحر" data-fr="État de la mer">حالة البحر</h2></div><strong id="seaState">--</strong><div class="sea-status" id="kayakStatus">--</div></article>
+    <article class="card info-card"><div class="card-title"><span class="real-icon wave-real"><svg class="ui-icon"><use href="assets/icons/pro-icons.svg#waves"></use></svg></span><h2 data-ar="الموج" data-fr="Vagues">الموج</h2></div><strong id="wave">-- m</strong><span id="period">الفترة -- s</span><div class="wave-arrow">↗</div><small data-ar="اتجاه الموج" data-fr="Direction des vagues">اتجاه الموج</small><b id="wavedir">--°</b></article>
+    <article class="card sea-card"><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#waves"></use></svg><h2 data-ar="حالة البحر" data-fr="État de la mer">حالة البحر</h2></div><strong id="seaState">--</strong><div class="sea-status" id="kayakStatus">--</div></article>
   </section>
 
   <section class="card celestial">
-    <div class="section-head"><div class="section-title"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/sun-moon.svg" alt="" aria-hidden="true"><div><h2 data-ar="الشمس والقمر والمد والجزر" data-fr="Soleil, lune et marées">الشمس والقمر والمد والجزر</h2><p data-ar="المسار اليومي حسب الموقع والتاريخ" data-fr="Évolution quotidienne selon le lieu et la date">المسار اليومي حسب الموقع والتاريخ</p></div></div><div class="tabs"><button class="active">اليوم</button><button>غدًا</button></div></div>
+    <div class="section-head"><div class="section-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#sun-moon"></use></svg><div><h2 data-ar="الشمس والقمر والمد والجزر" data-fr="Soleil, lune et marées">الشمس والقمر والمد والجزر</h2><p data-ar="المسار اليومي حسب الموقع والتاريخ" data-fr="Évolution quotidienne selon le lieu et la date">المسار اليومي حسب الموقع والتاريخ</p></div></div><div class="tabs"><button class="active">اليوم</button><button>غدًا</button></div></div>
     <div class="chart-wrap"><svg id="skyChart" viewBox="0 0 900 300" preserveAspectRatio="none" aria-label="رسم الشمس والقمر والمد والجزر"></svg></div>
     <div class="legend"><span><i class="dot tide-dot"></i><span data-ar="المد والجزر" data-fr="Marées">المد والجزر</span></span><span><i class="dot sun-dot"></i><span data-ar="مسار الشمس" data-fr="Trajet du soleil">مسار الشمس</span></span><span><i class="dot moon-dot"></i><span data-ar="مسار القمر" data-fr="Trajet de la lune">مسار القمر</span></span></div>
   </section>
 
   <section class="three-grid lower">
-    <article class="card mini-card"><div class="card-title"><img class="ui-icon" src="assets/icons/waves.svg" alt="" aria-hidden="true"><h2 data-ar="المد والجزر" data-fr="Marées">المد والجزر</h2></div><div class="two-values"><div><small data-ar="المد القادم" data-fr="Prochaine marée haute">المد القادم</small><b id="nextHigh">غير متوفر</b></div><div><small data-ar="الجزر القادم" data-fr="Prochaine marée basse">الجزر القادم</small><b id="nextLow">غير متوفر</b></div></div><p class="muted" data-ar="لا نعرض أوقاتًا وهمية. سيتم ربط مصدر مد وجزر حقيقي." data-fr="Aucune donnée de marée inventée. Une source réelle sera connectée.">لا نعرض أوقاتًا وهمية. سيتم ربط مصدر مد وجزر حقيقي.</p></article>
-    <article class="card mini-card"><div class="card-title"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/sun.svg" alt="" aria-hidden="true"><h2 data-ar="الشمس" data-fr="Soleil">الشمس</h2></div><div class="sun-times"><div><small data-ar="الشروق" data-fr="Lever">الشروق</small><b id="sunrise">--:--</b></div><div><small data-ar="الغروب" data-fr="Coucher">الغروب</small><b id="sunset">--:--</b></div></div><p id="dayLength" class="muted">--</p></article>
-    <article class="card mini-card"><div class="card-title"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/moon.svg" alt="" aria-hidden="true"><h2 data-ar="القمر" data-fr="Lune">القمر</h2></div><div class="moon-box"><span id="moonVisual" class="moon-visual"></span><div><small data-ar="الطور" data-fr="Phase">الطور</small><b id="moonPhase">--</b></div><div><small data-ar="الإضاءة" data-fr="Illumination">الإضاءة</small><b id="moonIllum">--%</b></div></div></article>
+    <article class="card mini-card"><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#waves"></use></svg><h2 data-ar="المد والجزر" data-fr="Marées">المد والجزر</h2></div><div class="two-values"><div><small data-ar="المد القادم" data-fr="Prochaine marée haute">المد القادم</small><b id="nextHigh">غير متوفر</b></div><div><small data-ar="الجزر القادم" data-fr="Prochaine marée basse">الجزر القادم</small><b id="nextLow">غير متوفر</b></div></div><p class="muted" data-ar="لا نعرض أوقاتًا وهمية. سيتم ربط مصدر مد وجزر حقيقي." data-fr="Aucune donnée de marée inventée. Une source réelle sera connectée.">لا نعرض أوقاتًا وهمية. سيتم ربط مصدر مد وجزر حقيقي.</p></article>
+    <article class="card mini-card"><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#sun"></use></svg><h2 data-ar="الشمس" data-fr="Soleil">الشمس</h2></div><div class="sun-times"><div><small data-ar="الشروق" data-fr="Lever">الشروق</small><b id="sunrise">--:--</b></div><div><small data-ar="الغروب" data-fr="Coucher">الغروب</small><b id="sunset">--:--</b></div></div><p id="dayLength" class="muted">--</p></article>
+    <article class="card mini-card"><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#moon"></use></svg><h2 data-ar="القمر" data-fr="Lune">القمر</h2></div><div class="moon-box"><span id="moonVisual" class="moon-visual"></span><div><small data-ar="الطور" data-fr="Phase">الطور</small><b id="moonPhase">--</b></div><div><small data-ar="الإضاءة" data-fr="Illumination">الإضاءة</small><b id="moonIllum">--%</b></div></div></article>
   </section>
 
-  <section class="card fishing-score"><div><div class="card-title"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/fish.svg" alt="" aria-hidden="true"><h2 data-ar="مؤشر الصيد بالكياك" data-fr="Indice pêche en kayak">مؤشر الصيد بالكياك</h2></div><div class="score-row"><div class="gauge"><svg viewBox="0 0 120 70"><path class="gauge-bg" d="M15 60a45 45 0 0 1 90 0"/><path id="gaugeFill" class="gauge-fill" d="M15 60a45 45 0 0 1 90 0"/></svg><b id="score">--</b><span>/100</span></div><div class="checks"><p>✓ <span data-ar="الرياح" data-fr="Vent">الرياح</span><b id="windCheck">--</b></p><p>✓ <span data-ar="الموج" data-fr="Vagues">الموج</span><b id="waveCheck">--</b></p><p>✓ <span data-ar="الطقس" data-fr="Météo">الطقس</span><b id="weatherCheck">--</b></p><p>✓ <span data-ar="المد" data-fr="Marée">المد</span><b data-ar="متاح عند توفر المصدر" data-fr="Disponible avec la source">متاح عند توفر المصدر</b></p></div></div></div><aside class="best-hours"><h3 data-ar="أفضل ساعات الصيد اليوم" data-fr="Meilleures heures de pêche">أفضل ساعات الصيد اليوم</h3><div><b id="best1">06:00 – 08:00</b><span>☀️</span></div><div><b id="best2">17:00 – 19:00</b><span>🌇</span></div></aside></section>
+  <section class="card fishing-score"><div><div class="card-title"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#fish"></use></svg><h2 data-ar="مؤشر الصيد بالكياك" data-fr="Indice pêche en kayak">مؤشر الصيد بالكياك</h2></div><div class="score-row"><div class="gauge"><svg viewBox="0 0 120 70"><path class="gauge-bg" d="M15 60a45 45 0 0 1 90 0"/><path id="gaugeFill" class="gauge-fill" d="M15 60a45 45 0 0 1 90 0"/></svg><b id="score">--</b><span>/100</span></div><div class="checks"><p>✓ <span data-ar="الرياح" data-fr="Vent">الرياح</span><b id="windCheck">--</b></p><p>✓ <span data-ar="الموج" data-fr="Vagues">الموج</span><b id="waveCheck">--</b></p><p>✓ <span data-ar="الطقس" data-fr="Météo">الطقس</span><b id="weatherCheck">--</b></p><p>✓ <span data-ar="المد" data-fr="Marée">المد</span><b data-ar="متاح عند توفر المصدر" data-fr="Disponible avec la source">متاح عند توفر المصدر</b></p></div></div></div><aside class="best-hours"><h3 data-ar="أفضل ساعات الصيد اليوم" data-fr="Meilleures heures de pêche">أفضل ساعات الصيد اليوم</h3><div><b id="best1">06:00 – 08:00</b><span>☀️</span></div><div><b id="best2">17:00 – 19:00</b><span>🌇</span></div></aside></section>
 
   <section class="hours card"><h2 data-ar="ساعات اليوم" data-fr="Heures du jour">ساعات اليوم</h2><div id="hourly" class="hourly"></div></section>
 </main>
 
 <nav class="bottom-nav">
-  <a class="active" href="#"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/home.svg" alt="" aria-hidden="true"><span data-ar="الرئيسية" data-fr="Accueil">الرئيسية</span></a>
-  <a href="#"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/map.svg" alt="" aria-hidden="true"><span data-ar="الخريطة" data-fr="Carte">الخريطة</span></a>
-  <a href="#"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/calendar-event.svg" alt="" aria-hidden="true"><span data-ar="مخطط الصيد" data-fr="Planner">مخطط الصيد</span></a>
-  <a href="#"><img class="ui-icon" src="assets/icons/waves.svg" alt="" aria-hidden="true"><span data-ar="البحر" data-fr="Mer">البحر</span></a>
-  <a href="#"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/fish.svg" alt="" aria-hidden="true"><span data-ar="الأسماك" data-fr="Poissons">الأسماك</span></a>
-  <a href="#"><img class="ui-icon" src="https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/map-pin.svg" alt="" aria-hidden="true"><span data-ar="المناطق" data-fr="Zones">المناطق</span></a>
+  <a class="active" href="#"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#home"></use></svg><span data-ar="الرئيسية" data-fr="Accueil">الرئيسية</span></a>
+  <a href="#"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#map"></use></svg><span data-ar="الخريطة" data-fr="Carte">الخريطة</span></a>
+  <a href="#"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#calendar"></use></svg><span data-ar="مخطط الصيد" data-fr="Planner">مخطط الصيد</span></a>
+  <a href="#"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#waves"></use></svg><span data-ar="البحر" data-fr="Mer">البحر</span></a>
+  <a href="#"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#fish"></use></svg><span data-ar="الأسماك" data-fr="Poissons">الأسماك</span></a>
+  <a href="#"><svg class="ui-icon" alt="" aria-hidden="true"><use href="assets/icons/pro-icons.svg#map-pin"></use></svg><span data-ar="المناطق" data-fr="Zones">المناطق</span></a>
 </nav>
 <script src="js/app.js"></script>
 </body>
