@@ -466,3 +466,178 @@ body{background:#020f18;color:#f4fbff}
   .wind-card .compass-needle i{border-left-width:7px;border-right-width:7px;border-bottom-width:23px}
   .wind-card .compass-needle i:after{left:-5px;top:21px;border-left-width:5px;border-right-width:5px;border-top-width:20px}
 }
+
+
+/* ===== VERIFIED FINAL MOBILE ICON + COMPASS PATCH =====
+   One isolated compass layout. Later rules intentionally override
+   the older duplicate compass rules above. */
+.ui-icon,
+.weather-symbol,
+.hour-weather-svg,
+.moon-symbol{overflow:visible}
+
+.weather-icon .weather-symbol{
+  width:82px!important;
+  height:82px!important;
+  color:#eafaff;
+  filter:drop-shadow(0 6px 12px #0009);
+}
+
+.card-title>.ui-icon,
+.real-icon .ui-icon,
+.weather-meta .ui-icon,
+.bottom-nav .ui-icon,
+.search-action .ui-icon,
+.location-pill .ui-icon{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+.wind-card{position:relative;overflow:hidden}
+
+.wind-card .wind-data{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 82px;
+  align-items:center;
+  gap:8px;
+  min-height:128px;
+  padding:0!important;
+}
+
+.wind-card .wind-values{
+  min-width:0;
+  padding:0!important;
+}
+
+.wind-card .wind-values #wind{
+  display:block;
+  white-space:nowrap;
+}
+
+.wind-card .wind-values #gust{
+  display:block;
+  white-space:nowrap;
+}
+
+.wind-card .wind-direction-text{
+  margin-top:12px!important;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:2px;
+}
+
+.wind-card .compass-pro{
+  position:relative!important;
+  inset:auto!important;
+  width:78px!important;
+  height:78px!important;
+  margin:0 auto!important;
+  transform:none!important;
+  z-index:2;
+  flex:none;
+  border:1px solid #3d7082;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%,#0b3140 0 14%,#061b27 15% 48%,#082738 49% 61%,#061722 62% 100%);
+  box-shadow:
+    0 0 0 2px #061a25,
+    0 7px 16px #0009,
+    inset 0 0 14px #03131e;
+}
+
+.wind-card .compass-ring span{
+  font-size:7px!important;
+  font-weight:700;
+  color:#9fc3d1;
+}
+
+.wind-card .compass-ring span:first-child{color:#eafaff}
+
+.wind-card .compass-ticks{
+  inset:10px!important;
+  border-color:#3d7182!important;
+}
+
+.wind-card .compass-needle{
+  height:52px!important;
+  z-index:3;
+}
+
+.wind-card .compass-degree{
+  bottom:-17px!important;
+  font-size:7px!important;
+  padding:2px 5px!important;
+  z-index:4;
+}
+
+@media(max-width:700px){
+  .wind-card .wind-data{
+    grid-template-columns:minmax(0,1fr) 76px;
+    gap:5px;
+    min-height:128px;
+  }
+
+  .wind-card .compass-pro{
+    width:72px!important;
+    height:72px!important;
+  }
+
+  .wind-card .compass-needle{height:48px!important}
+  .wind-card .compass-degree{bottom:-15px!important}
+
+  .wind-card .wind-values #wind{
+    font-size:22px!important;
+  }
+
+  .wind-card .wind-values #gust{
+    font-size:8px!important;
+  }
+
+  .wind-card .wind-direction-text{
+    margin-top:8px!important;
+  }
+
+  .wind-card .wind-direction-text small{font-size:8px!important}
+  .wind-card .wind-direction-text b{font-size:11px!important}
+
+  .weather-icon .weather-symbol{
+    width:64px!important;
+    height:64px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wind-card .wind-data{
+    grid-template-columns:minmax(0,1fr) 68px;
+  }
+
+  .wind-card .compass-pro{
+    width:64px!important;
+    height:64px!important;
+  }
+
+  .wind-card .compass-needle{height:43px!important}
+  .wind-card .compass-ring span{font-size:5.5px!important}
+  .wind-card .compass-ticks{inset:8px!important}
+  .wind-card .wind-values #wind{font-size:19px!important}
+}
+
+/* Never show a broken weather glyph as a square/photo. */
+.weather-icon,
+.weather-icon::before,
+.weather-icon::after{
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+/* Stable icon sizing across all dashboard cards. */
+.card-title>.ui-icon{width:29px;height:29px}
+.real-icon .ui-icon{width:29px;height:29px}
+.weather-meta .ui-icon{width:25px;height:25px}
+.bottom-nav .ui-icon{width:27px;height:27px}
+.search-action .ui-icon{width:22px;height:22px}
+.location-pill .ui-icon{width:27px;height:27px}
