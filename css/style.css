@@ -184,3 +184,67 @@ button,input{max-width:100%}
 .hour-weather-svg{display:block;width:34px;height:34px;margin:5px auto;color:#64dfff;filter:drop-shadow(0 3px 7px #0007)}
 
 /* Verified: all icon/image URL dependencies removed from icon rendering */
+
+/* REFERENCE DESIGN — phone dashboard */
+body{background:#020f18;color:#f4fbff}
+.topbar{height:82px;background:linear-gradient(180deg,#03121d 0%,#041722 100%);border-bottom:1px solid #163b4d}
+.brand{gap:9px}.brand img{width:58px;height:58px}.brand b{font-size:20px}.brand span{font-size:14px}
+.location-row{grid-template-columns:1.05fr 1.2fr .8fr;max-width:1100px;margin:auto;padding:12px 14px 8px}
+.location-pill,.search-pill,.date-pill{background:#061a27;border:1px solid #27556b;border-radius:17px;box-shadow:inset 0 0 16px #04111a}
+.hero-weather{position:relative;overflow:hidden;min-height:170px;background:linear-gradient(105deg,#092536,#0a2b3a 52%,#0a1e2b);border-color:#1b5066}
+.hero-weather:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 17% 55%,#ffbd4a2a 0 8%,transparent 20%),linear-gradient(160deg,transparent 55%,#0c526533);pointer-events:none}
+.weather-icon,.temp-block,.weather-meta{position:relative;z-index:1}
+.weather-icon{width:100px;height:100px}
+.weather-icon .weather-symbol{width:92px;height:92px;color:#e9faff;stroke-width:1.5;filter:drop-shadow(0 5px 10px #0009)}
+.temp-block strong{font-size:50px}.temp-block span{font-size:18px}.temp-block em{font-size:13px}
+.weather-meta{gap:11px}.weather-meta div{grid-template-columns:28px 1fr auto}.weather-meta svg{width:24px;height:24px}
+.three-grid{max-width:1100px;margin-left:auto;margin-right:auto;gap:10px}
+.info-card,.sea-card{min-height:185px;background:linear-gradient(145deg,#071f2c,#061722);border-color:#17495e}
+.card-title h2{font-size:19px}.card-title .ui-icon{width:30px;height:30px}
+.wind-data{grid-template-columns:minmax(0,1fr) 108px}
+.wind-card .compass{width:100px;height:100px}
+.wind-values #wind{font-size:31px}.wind-direction-text{margin-top:22px}
+.celestial{max-width:1100px;margin-left:auto;margin-right:auto;background:linear-gradient(145deg,#071c29,#04141e)}
+.chart-wrap{height:300px;background:linear-gradient(180deg,#092536,#03131e)}
+.lower,.fishing-score,.hours{max-width:1100px;margin-left:auto;margin-right:auto}
+.fishing-score{border-color:#397d35;background:linear-gradient(145deg,#06221f,#061719)}
+.gauge-fill{stroke:#91df29}
+.bottom-nav{max-width:1100px;margin-left:auto;margin-right:auto}
+
+/* Mobile reference: 3 compact cards like the target screenshot */
+@media(max-width:700px){
+  .topbar{height:78px;padding:7px 14px}
+  .brand img{width:52px;height:52px}.brand b{font-size:17px}.brand span{font-size:12px}
+  .location-row{grid-template-columns:1fr 1fr 1fr;padding:10px 10px 7px;gap:7px}
+  .location-pill,.search-pill,.date-pill{height:48px;min-height:48px;font-size:12px}
+  .search-pill{grid-column:auto;grid-row:auto}.search-pill input{font-size:11px}
+  .hero-weather{width:calc(100% - 20px);margin:7px 10px 9px;padding:13px;min-height:156px;grid-template-columns:76px 1fr 1.15fr;gap:7px}
+  .weather-icon{width:70px;height:70px}.weather-icon .weather-symbol{width:68px;height:68px}
+  .temp-block strong{font-size:42px}.temp-block span{font-size:15px}
+  .weather-meta{grid-column:auto;gap:7px}.weather-meta div{grid-template-columns:25px 1fr;gap:3px}.weather-meta b{grid-column:2;font-size:12px}
+  .three-grid{width:calc(100% - 20px);margin-inline:10px;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+  .info-card,.sea-card{min-height:178px;padding:10px 9px;border-radius:18px}
+  .card-title{gap:4px}.card-title h2{font-size:14px}.card-title .ui-icon{width:27px;height:27px}
+  .info-card>strong{font-size:25px;margin-top:12px}.info-card>span{font-size:9px}
+  .wind-card{grid-column:auto;min-height:178px}
+  .wind-data{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:2px;min-height:145px}
+  .wind-values #wind{font-size:23px;margin-top:8px}.wind-values #gust{font-size:9px}
+  .wind-direction-text{margin-top:8px;align-items:center}.wind-direction-text small{font-size:8px}.wind-direction-text b{font-size:12px}
+  .wind-card .compass{position:absolute;right:7px;top:66px;width:69px;height:69px;margin:0}
+  .wind-card .compass-ring span{font-size:6px}.wind-card .compass-ticks{inset:9px}.wind-card .compass-needle{height:45px}.wind-card .compass-degree{bottom:-16px;font-size:7px}
+  .wave-arrow{font-size:19px;margin-top:5px}.info-card>small{margin-top:20px;font-size:8px}.info-card>b{font-size:11px}
+  .sea-card strong{font-size:21px;margin:24px 0 12px}.sea-status{font-size:8px;padding:6px 7px;white-space:nowrap}
+  .celestial,.fishing-score,.hours{width:calc(100% - 20px);margin-inline:10px}
+  .celestial{padding:10px;border-radius:18px}.section-title h2{font-size:15px}.section-title p{font-size:9px}.section-title>.ui-icon{width:27px;height:27px}
+  .chart-wrap{height:235px;margin-top:6px}.legend{font-size:9px;gap:7px}
+  .lower{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.lower .mini-card:first-child{grid-column:auto}
+  .mini-card{min-height:140px;padding:10px}.mini-card .card-title h2{font-size:13px}.two-values,.sun-times{grid-template-columns:1fr 1fr;margin-top:10px}.two-values div,.sun-times div{padding:6px}.mini-card small{font-size:8px}.mini-card b{font-size:11px}.moon-box{grid-template-columns:1fr 1fr;margin-top:10px}.moon-box>span{grid-column:1/-1;justify-self:center;font-size:34px}
+  .fishing-score{grid-template-columns:1.05fr 1fr;padding:11px}.score-row{grid-template-columns:95px 1fr}.gauge svg{width:92px}.gauge b{font-size:21px}.checks p{font-size:9px}.best-hours{border-right:1px solid #173f37;border-top:0;padding:0 0 0 8px}.best-hours h3{font-size:12px}.best-hours div{padding:6px;font-size:9px}.best-hours b{font-size:10px}
+  .hours{margin-bottom:84px;padding:10px}.hours h2{font-size:13px}.hourly{grid-template-columns:repeat(8,minmax(58px,1fr))}
+}
+@media(max-width:390px){
+  .brand img{width:46px;height:46px}.brand b{font-size:15px}.brand span{font-size:10px}
+  .location-pill,.search-pill,.date-pill{font-size:10px}.hero-weather{grid-template-columns:62px 1fr 1.15fr}.weather-icon{width:58px;height:58px}.weather-icon .weather-symbol{width:57px;height:57px}.temp-block strong{font-size:35px}
+  .info-card,.sea-card{padding:8px 7px}.card-title h2{font-size:12px}.card-title .ui-icon{width:23px;height:23px}.wind-card .compass{width:62px;height:62px;right:5px}.wind-values #wind{font-size:20px}.sea-card strong{font-size:19px}
+  .celestial .section-title h2{font-size:13px}.chart-wrap{height:210px}.fishing-score{grid-template-columns:1fr}.best-hours{border-top:1px solid #173f37;border-right:0;padding:9px 0 0}
+}
