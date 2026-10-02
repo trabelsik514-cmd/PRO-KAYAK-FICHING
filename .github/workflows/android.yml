@@ -7,22 +7,34 @@ permissions:
   contents: read
 jobs:
   apk:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
-      - run: npm install
-      - run: npx cap add android
-      - run: npx cap sync android
-      - uses: actions/setup-java@v4
+          node-version: 20
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Create Android project
+        run: npx cap add android
+      - name: Sync web app
+        run: npx cap sync android
+      - name: Java
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
-      - uses: android-actions/setup-android@v3
-      - run: cd android && ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v4
+          cache: gradle
+      - name: Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --stacktrace
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: PRO-KAYAK-FISHING-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
