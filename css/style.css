@@ -1034,3 +1034,78 @@ body{background:radial-gradient(700px 360px at 50% 0,rgba(25,150,210,.2),transpa
 .bottom-nav{background:rgba(3,16,24,.92)!important;box-shadow:0 -15px 38px rgba(0,0,0,.2)!important;backdrop-filter:blur(18px)}
 .bottom-nav a{border-radius:18px!important;margin:7px 3px!important;color:#7894a2!important}.bottom-nav a.active{color:#61d9ff!important;background:rgba(22,151,218,.2)!important}
 @media(max-width:700px){.hero-weather{min-height:300px!important;grid-template-columns:82px minmax(0,1fr)!important}.hero-weather .weather-meta{grid-column:1/-1!important}.hero-weather .weather-icon{width:78px!important;height:78px!important}.hero-weather .weather-icon .weather-symbol{width:74px!important;height:74px!important}.hero-weather .temp-block strong{font-size:47px!important}.weather-meta>div{min-height:70px!important}.info-card,.sea-card{min-height:184px!important;padding:11px!important}.card-title h2{font-size:14px!important}.wind-card .wind-data{grid-template-columns:minmax(0,1fr) 64px!important}.wind-card .compass-pro{width:60px!important;height:60px!important}.wind-card .compass-needle{height:37px!important}}
+
+
+/* PRO KAYAK — FINAL COMPASS / ICON CLEANUP */
+.wind-card .wind-data{
+  grid-template-columns:minmax(0,1fr) 72px!important;
+  gap:8px!important;
+  align-items:center!important;
+  min-height:126px!important;
+  padding:4px 0!important;
+  direction:ltr!important;
+}
+.wind-card .wind-values{
+  min-width:0!important;
+  direction:rtl!important;
+  text-align:right!important;
+}
+.wind-card .wind-values #wind,
+.wind-card .wind-values #gust,
+.wind-card .wind-direction-text{
+  position:relative!important;
+  z-index:1!important;
+  max-width:100%!important;
+}
+.wind-card .wind-values #wind{
+  font-size:clamp(20px,5vw,28px)!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+.wind-card .wind-values #gust{
+  font-size:9px!important;
+  white-space:nowrap!important;
+}
+.wind-card .wind-direction-text{
+  margin-top:9px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:2px!important;
+}
+.wind-card .compass-pro{
+  position:relative!important;
+  inset:auto!important;
+  width:66px!important;
+  height:66px!important;
+  margin:0 auto!important;
+  transform:none!important;
+  z-index:4!important;
+  overflow:visible!important;
+  border:1px solid rgba(92,215,245,.55)!important;
+  background:radial-gradient(circle,#0c3546 0 43%,#061b27 44% 62%,#0a2a39 63% 66%,transparent 67%)!important;
+  box-shadow:0 0 0 2px #061a25,0 7px 15px #0009,inset 0 0 12px #03131e!important;
+}
+.wind-card .compass-ring span{
+  font-size:6px!important;
+  line-height:1!important;
+  font-weight:800!important;
+}
+.wind-card .compass-ticks{inset:8px!important;border-color:#4b8291!important;opacity:.75!important}
+.wind-card .compass-needle{height:42px!important;width:4px!important;z-index:6!important}
+.wind-card .compass-needle i{border-left-width:6px!important;border-right-width:6px!important;border-bottom-width:20px!important}
+.wind-card .compass-needle i:after{left:-4px!important;top:18px!important;border-left-width:4px!important;border-right-width:4px!important;border-top-width:17px!important}
+.wind-card .compass-needle b{width:8px!important;height:8px!important;z-index:7!important}
+.wind-card .compass-center{width:15px!important;height:15px!important;z-index:5!important}
+.wind-card .compass-degree{bottom:-15px!important;font-size:7px!important;padding:2px 5px!important;z-index:8!important}
+@media(max-width:700px){
+  .wind-card .wind-data{grid-template-columns:minmax(0,1fr) 68px!important;gap:5px!important}
+  .wind-card .compass-pro{width:60px!important;height:60px!important}
+  .wind-card .compass-needle{height:38px!important}
+}
+@media(max-width:390px){
+  .wind-card .wind-data{grid-template-columns:minmax(0,1fr) 62px!important}
+  .wind-card .compass-pro{width:56px!important;height:56px!important}
+  .wind-card .compass-needle{height:35px!important}
+}
