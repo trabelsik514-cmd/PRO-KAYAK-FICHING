@@ -641,3 +641,289 @@ body{background:#020f18;color:#f4fbff}
 .bottom-nav .ui-icon{width:27px;height:27px}
 .search-action .ui-icon{width:22px;height:22px}
 .location-pill .ui-icon{width:27px;height:27px}
+
+
+/* =========================================================
+   PRO KAYAK FISHING — FINAL ICON LAYOUT
+   Single authoritative override for the icon/compass system.
+   ========================================================= */
+
+svg.ui-icon,
+svg.weather-symbol,
+svg.hour-weather-svg,
+svg.moon-symbol{
+  overflow:visible!important;
+  display:block!important;
+  fill:none;
+}
+
+.card-title>.ui-icon{
+  width:30px!important;height:30px!important;
+  color:#55dcff!important;
+  filter:none!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+.real-icon{
+  width:34px!important;height:34px!important;
+  flex:0 0 34px!important;
+  display:grid!important;
+  place-items:center!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+
+.real-icon .ui-icon{
+  width:31px!important;height:31px!important;
+  color:#55dcff!important;
+  filter:none!important;
+}
+
+.weather-meta .ui-icon{
+  width:26px!important;height:26px!important;
+  color:#5fe0ff!important;
+  filter:none!important;
+}
+
+.weather-icon{
+  display:grid!important;
+  place-items:center!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+
+.weather-icon .weather-symbol{
+  width:82px!important;height:82px!important;
+  filter:drop-shadow(0 6px 10px #0008)!important;
+}
+
+.hour-weather-svg{
+  width:30px!important;height:30px!important;
+  color:#62ddff!important;
+  filter:none!important;
+}
+
+.bottom-nav .ui-icon{
+  width:27px!important;height:27px!important;
+  color:#9db5c0!important;
+  filter:none!important;
+}
+.bottom-nav .active .ui-icon{color:#42cfff!important}
+
+.location-pill .ui-icon,
+.search-action .ui-icon,
+.lang .ui-icon{
+  width:25px!important;height:25px!important;
+  color:#64ddff!important;
+  filter:none!important;
+}
+
+/* Wind card: two clean zones, text on the left and compass on the right. */
+.wind-card .wind-data{
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 78px!important;
+  align-items:center!important;
+  gap:6px!important;
+  min-height:132px!important;
+  padding:4px 5px 4px 0!important;
+  direction:ltr!important;
+}
+
+.wind-card .wind-values{
+  min-width:0!important;
+  padding:0!important;
+  direction:rtl!important;
+  text-align:right!important;
+}
+
+.wind-card .wind-values #wind{
+  display:block!important;
+  font-size:25px!important;
+  line-height:1.05!important;
+  white-space:nowrap!important;
+}
+
+.wind-card .wind-values #gust{
+  display:block!important;
+  margin-top:4px!important;
+  font-size:9px!important;
+  white-space:nowrap!important;
+}
+
+.wind-card .wind-direction-text{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  gap:2px!important;
+  margin-top:13px!important;
+  direction:rtl!important;
+}
+
+.wind-card .compass-pro{
+  position:relative!important;
+  inset:auto!important;
+  width:74px!important;
+  height:74px!important;
+  margin:0 auto!important;
+  transform:none!important;
+  direction:ltr!important;
+  border-radius:50%!important;
+  overflow:visible!important;
+  z-index:3!important;
+  background:
+    radial-gradient(circle,#0a2d3d 0 45%,#061a26 46% 62%,#0a3142 63% 66%,transparent 67%)!important;
+  border:1px solid #396c7d!important;
+  box-shadow:
+    0 0 0 2px #061822,
+    0 6px 14px #0008,
+    inset 0 0 12px #03131e!important;
+}
+
+.wind-card .compass-ring span{
+  font-size:6px!important;
+  line-height:1!important;
+  color:#9fc2cf!important;
+  font-weight:700!important;
+}
+.wind-card .compass-ring span:nth-child(1){color:#effcff!important}
+
+.wind-card .compass-ticks{
+  inset:9px!important;
+  border:1px dashed #3e7587!important;
+  opacity:.7!important;
+}
+
+.wind-card .compass-needle{
+  height:49px!important;
+  width:4px!important;
+  z-index:5!important;
+}
+
+.wind-card .compass-needle i{
+  border-left-width:7px!important;
+  border-right-width:7px!important;
+  border-bottom-width:23px!important;
+}
+
+.wind-card .compass-needle i:after{
+  left:-5px!important;
+  top:21px!important;
+  border-left-width:5px!important;
+  border-right-width:5px!important;
+  border-top-width:20px!important;
+}
+
+.wind-card .compass-needle b{
+  width:8px!important;height:8px!important;
+}
+
+.wind-card .compass-center{
+  width:16px!important;height:16px!important;
+  z-index:4!important;
+}
+
+.wind-card .compass-degree{
+  bottom:-17px!important;
+  font-size:7px!important;
+  padding:2px 5px!important;
+  z-index:8!important;
+}
+
+/* Never put a decorative square behind the icons. */
+.real-icon,
+.card-title>.ui-icon,
+.weather-meta .ui-icon{
+  border-radius:0!important;
+}
+
+@media(max-width:700px){
+  .weather-icon .weather-symbol{
+    width:64px!important;height:64px!important;
+  }
+
+  .card-title>.ui-icon{
+    width:25px!important;height:25px!important;
+  }
+
+  .real-icon{
+    width:29px!important;height:29px!important;
+    flex-basis:29px!important;
+  }
+  .real-icon .ui-icon{
+    width:27px!important;height:27px!important;
+  }
+
+  .wind-card .wind-data{
+    grid-template-columns:minmax(0,1fr) 68px!important;
+    min-height:126px!important;
+    padding-right:0!important;
+  }
+
+  .wind-card .wind-values #wind{
+    font-size:20px!important;
+  }
+
+  .wind-card .wind-values #gust{
+    font-size:8px!important;
+  }
+
+  .wind-card .wind-direction-text{
+    margin-top:9px!important;
+  }
+
+  .wind-card .compass-pro{
+    width:64px!important;
+    height:64px!important;
+  }
+
+  .wind-card .compass-needle{
+    height:43px!important;
+  }
+
+  .wind-card .compass-ticks{
+    inset:8px!important;
+  }
+
+  .wind-card .compass-degree{
+    bottom:-15px!important;
+    font-size:6.5px!important;
+  }
+
+  .weather-meta .ui-icon{
+    width:23px!important;height:23px!important;
+  }
+
+  .bottom-nav .ui-icon{
+    width:25px!important;height:25px!important;
+  }
+}
+
+@media(max-width:390px){
+  .weather-icon .weather-symbol{
+    width:58px!important;height:58px!important;
+  }
+
+  .wind-card .wind-data{
+    grid-template-columns:minmax(0,1fr) 60px!important;
+  }
+
+  .wind-card .compass-pro{
+    width:57px!important;
+    height:57px!important;
+  }
+
+  .wind-card .compass-needle{
+    height:39px!important;
+  }
+
+  .wind-card .compass-ring span{
+    font-size:5.2px!important;
+  }
+}
