@@ -1001,3 +1001,36 @@ svg.ui-icon,svg.weather-symbol,svg.hour-weather-svg,svg.moon-symbol{
   .wind-card .compass{width:64px;height:64px}
   .wind-card .compass-needle{height:41px}
 }
+
+/* PRO KAYAK — premium weather dashboard pass */
+:root{--p:#06131c;--c:#49d5ff;--m:#8ea9b7;--g:#73e34b;--y:#ffd34d}
+body{background:radial-gradient(700px 360px at 50% 0,rgba(25,150,210,.2),transparent 65%),linear-gradient(180deg,#061722,#020d14)!important}
+.card{border:1px solid rgba(92,205,239,.22)!important;background:linear-gradient(145deg,rgba(14,48,65,.9),rgba(5,24,35,.96))!important;border-radius:24px!important;box-shadow:0 16px 36px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.04)!important}
+.location-pill,.search-pill,.date-pill{border:1px solid rgba(92,205,239,.22)!important;background:rgba(7,29,42,.82)!important;border-radius:18px!important}
+.hero-weather{min-height:210px!important;padding:20px!important;display:grid!important;grid-template-columns:88px minmax(0,1fr) 1fr!important;gap:16px!important;align-items:center!important}
+.hero-weather .weather-icon{width:88px!important;height:88px!important;display:grid!important;place-items:center!important}
+.hero-weather .weather-icon .weather-symbol{width:84px!important;height:84px!important}
+.hero-weather .temp-block strong{font-size:clamp(46px,10vw,62px)!important;letter-spacing:-.05em!important}
+.hero-weather .temp-block em{background:rgba(2,17,27,.6)!important;border-radius:999px!important;padding:7px 12px!important;font-style:normal!important}
+.weather-meta{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:7px!important}
+.weather-meta>div{min-height:90px;padding:10px 5px!important;border-radius:16px!important;background:rgba(3,20,30,.42)!important;border:1px solid rgba(100,205,235,.08)!important;text-align:center}
+.weather-meta .ui-icon{color:var(--c)!important;width:25px!important;height:25px!important}
+.weather-meta span{font-size:10px!important;color:var(--m)!important}
+.three-grid{gap:10px!important}
+.info-card,.sea-card{min-height:190px!important;padding:16px!important}
+.real-icon,.card-title>.ui-icon{width:36px!important;height:36px!important;border-radius:12px!important;display:grid!important;place-items:center!important;background:rgba(66,200,255,.08)!important;border:1px solid rgba(66,200,255,.16)!important;color:var(--c)!important}
+.wind-card .wind-data{grid-template-columns:minmax(0,1fr) 78px!important;gap:4px!important}
+.wind-card .wind-values strong{font-size:clamp(28px,6vw,38px)!important}
+.wind-card .compass-pro{width:74px!important;height:74px!important;margin:auto!important}
+.wind-card .compass-degree{bottom:-16px!important;font-size:8px!important}
+.marine-card>strong,.sea-card>strong{font-size:clamp(30px,7vw,42px)!important;letter-spacing:-.04em!important}
+.sea-status{border-radius:999px!important;background:rgba(115,227,75,.1)!important;border:1px solid rgba(115,227,75,.55)!important;color:#91ef70!important;padding:8px 12px!important}
+.celestial{padding:18px!important}.tabs{border-radius:999px!important;padding:3px!important;background:rgba(2,16,25,.6)!important}.tabs button{border-radius:999px!important}.tabs button.active{background:#159fe8!important;box-shadow:0 5px 18px rgba(21,159,232,.2)!important}
+.mini-card{min-height:175px!important;padding:16px!important}
+.fishing-score{border-color:rgba(115,227,75,.35)!important;background:linear-gradient(145deg,rgba(8,40,35,.9),rgba(4,23,26,.96))!important}
+.best-hours{border-radius:18px!important;background:rgba(3,20,25,.5)!important;border:1px solid rgba(115,227,75,.14)!important;padding:13px!important}
+.best-hours>div{border-radius:12px!important;background:rgba(4,22,28,.55)!important}
+.hours{padding:17px!important}.hourly{gap:8px!important}.hourly>div{min-width:82px!important;min-height:118px!important;border-radius:17px!important;background:rgba(4,21,31,.58)!important;border:1px solid rgba(93,197,231,.08)!important}
+.bottom-nav{background:rgba(3,16,24,.92)!important;box-shadow:0 -15px 38px rgba(0,0,0,.2)!important;backdrop-filter:blur(18px)}
+.bottom-nav a{border-radius:18px!important;margin:7px 3px!important;color:#7894a2!important}.bottom-nav a.active{color:#61d9ff!important;background:rgba(22,151,218,.2)!important}
+@media(max-width:700px){.hero-weather{min-height:300px!important;grid-template-columns:82px minmax(0,1fr)!important}.hero-weather .weather-meta{grid-column:1/-1!important}.hero-weather .weather-icon{width:78px!important;height:78px!important}.hero-weather .weather-icon .weather-symbol{width:74px!important;height:74px!important}.hero-weather .temp-block strong{font-size:47px!important}.weather-meta>div{min-height:70px!important}.info-card,.sea-card{min-height:184px!important;padding:11px!important}.card-title h2{font-size:14px!important}.wind-card .wind-data{grid-template-columns:minmax(0,1fr) 64px!important}.wind-card .compass-pro{width:60px!important;height:60px!important}.wind-card .compass-needle{height:37px!important}}
