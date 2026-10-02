@@ -248,3 +248,11 @@ body{background:#020f18;color:#f4fbff}
   .info-card,.sea-card{padding:8px 7px}.card-title h2{font-size:12px}.card-title .ui-icon{width:23px;height:23px}.wind-card .compass{width:62px;height:62px;right:5px}.wind-values #wind{font-size:20px}.sea-card strong{font-size:19px}
   .celestial .section-title h2{font-size:13px}.chart-wrap{height:210px}.fishing-score{grid-template-columns:1fr}.best-hours{border-top:1px solid #173f37;border-right:0;padding:9px 0 0}
 }
+
+.search-pill{position:relative;z-index:30;display:flex;align-items:center}
+.search-action{border:0;background:transparent;color:inherit;display:grid;place-items:center;padding:0 4px;cursor:pointer}
+.search-results{position:absolute;z-index:100;top:58px;left:50%;transform:translateX(-50%);width:min(430px,calc(100vw - 24px));background:#061a27;border:1px solid #2a6078;border-radius:16px;overflow:hidden;box-shadow:0 15px 35px #0009}
+.search-result{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;background:transparent;border:0;border-bottom:1px solid #173b4b;color:#effaff;text-align:right;cursor:pointer}
+.search-result:last-child{border-bottom:0}.search-result b{font-size:14px}.search-result span{font-size:10px;color:#8fb1c0}
+.search-result:hover{background:#0b2b3b}.search-loading{padding:16px;text-align:center;color:#9cc2d1;font-size:12px}
+@media(max-width:700px){.search-results{top:51px}.search-result{padding:11px 12px}.search-result b{font-size:12px}.search-result span{font-size:9px}}
