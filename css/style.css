@@ -39,3 +39,18 @@ button,input{max-width:100%}
 .weather-icon.wx-rain{background-image:url("https://images.unsplash.com/photo-1519692933481-e162a9577cbe?auto=format&fit=crop&w=220&q=80")}
 .moon-visual{display:block;width:48px;height:48px;border-radius:50%;background:url("https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&w=160&q=80") center/cover no-repeat;box-shadow:0 4px 12px #0008}
 @media(max-width:480px){.real-icon{width:38px;height:38px;flex-basis:38px}.weather-icon{width:58px;height:58px}.moon-visual{width:40px;height:40px}}
+
+/* Tabler Icons v3.48.0 — unified lightweight UI icon system */
+.ui-icon{width:24px;height:24px;display:inline-block;flex:0 0 24px;object-fit:contain}
+.menu-btn .ui-icon{width:29px;height:29px;filter:brightness(0) saturate(100%) invert(92%) sepia(10%) saturate(450%) hue-rotate(150deg) brightness(105%)}
+.lang .ui-icon,.location-pill .ui-icon,.weather-meta .ui-icon{color:#64dfff;filter:brightness(0) saturate(100%) invert(79%) sepia(44%) saturate(1194%) hue-rotate(162deg) brightness(101%) contrast(102%)}
+.search-icon{width:20px;height:20px;filter:brightness(0) saturate(100%) invert(52%) sepia(16%) saturate(632%) hue-rotate(150deg)}
+.card-title .ui-icon{width:28px;height:28px;filter:brightness(0) saturate(100%) invert(74%) sepia(74%) saturate(1667%) hue-rotate(160deg) brightness(101%) contrast(101%)}
+.section-title>.ui-icon{width:30px;height:30px;filter:brightness(0) saturate(100%) invert(78%) sepia(94%) saturate(1187%) hue-rotate(347deg) brightness(103%) contrast(103%)}
+.mini-card .card-title .ui-icon{width:27px;height:27px}
+.fishing-score .card-title .ui-icon{filter:brightness(0) saturate(100%) invert(78%) sepia(68%) saturate(1101%) hue-rotate(63deg) brightness(103%) contrast(99%)}
+.bottom-nav a .ui-icon{width:22px;height:22px;filter:brightness(0) saturate(100%) invert(62%) sepia(13%) saturate(574%) hue-rotate(151deg) brightness(89%) contrast(89%)}
+.bottom-nav a.active .ui-icon{filter:brightness(0) saturate(100%) invert(61%) sepia(92%) saturate(1937%) hue-rotate(169deg) brightness(101%) contrast(102%)}
+.real-icon{background-color:#0b2a39;background-size:70% 70%;background-position:center;background-repeat:no-repeat;box-shadow:0 4px 12px #0008}
+.wind-real{background-image:none;mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/wind.svg") center/70% 70% no-repeat;-webkit-mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/wind.svg") center/70% 70% no-repeat;background-color:#37cfff}
+.wave-real{background-image:none;mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/waves.svg") center/70% 70% no-repeat;-webkit-mask:url("https://cdn.jsdelivr.net/npm/@tabler/icons@3.48.0/icons/outline/waves.svg") center/70% 70% no-repeat;background-color:#37cfff}
